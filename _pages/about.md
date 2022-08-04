@@ -2,24 +2,24 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='www.kuleuven.be'>KU Leuven</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_cicular: false # crops the image to make it circular
+  image_cicular: true # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>STADIUS - Office 106</p>
+    <p>Kasteelpark Arenberg 10</p>
+    <p>3001 Leuven</p>
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Welcome, I am Konstantinos and a member of Biomed STADIUS at ESAT, KU Leuven in Belgium as a PhD student. There along with my supervisors [Prof. Maarten De Vos](https://www.esat.kuleuven.be/stadius/person.php?id=203), [Dr. Christos Chatzichristos](https://www.linkedin.com/in/christoschatzichristos/?originalSubdomain=be) and [Prof. Johan Suykens](https://www.esat.kuleuven.be/sista/members/suykens.html), we are interested in <b>Multimodal Fusion</b> through learning processes.  
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Our goals are to find the best ways to allow modalities to combine information from each other, tolerate the absence of a modality subset and through multiple sources enhance our model calibration.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before joining Biomed, I was a part of PSI group as a master student at the same building working on uncertainty for autonomous vehicles. <b>Bayesian Model Average </b> approximations and the CityScapes dataset was combined to create a pixel-level <b>Active Learning</b> schema for semantic segmentation. I had the chance to be supervised with [Ir. Mark Proesmas](https://www.linkedin.com/in/marc-proesmans-a616065/?originalSubdomain=be), [Ir. Jonas Heylen](https://www.linkedin.com/in/jonas-heylen/?originalSubdomain=be) and [Prof. Luc Van Gool](https://www.linkedin.com/in/luc-van-gool-1b4a689/?originalSubdomain=ch)
