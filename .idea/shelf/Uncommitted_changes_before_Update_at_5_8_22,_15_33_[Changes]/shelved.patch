@@ -1,0 +1,64 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"f579c2d7-92f3-4864-83a6-100354fb9177\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2CrlWkonhJLZSlsRR4OkbK4f4Kg\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"true\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"SvnConfiguration\">\n    <configuration>$USER_HOME$/.subversion</configuration>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"f579c2d7-92f3-4864-83a6-100354fb9177\" name=\"Changes\" comment=\"\" />\n      <created>1659568618349</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1659568618349</updated>\n      <workItem from=\"1659568621903\" duration=\"8547000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"change prof img\">\n      <created>1659569184171</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659569184171</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"change prof img\">\n      <created>1659569343153</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659569343153</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"empty commit\">\n      <created>1659570017053</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659570017053</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"reading mode\">\n      <created>1659570311137</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659570311137</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"reading mode\">\n      <created>1659570467850</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659570467850</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"baseurl\">\n      <created>1659571014700</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659571014700</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <ignored-roots>\n      <path value=\"$PROJECT_DIR$\" />\n    </ignored-roots>\n    <MESSAGE value=\"change prof img\" />\n    <MESSAGE value=\"empty commit\" />\n    <MESSAGE value=\"reading mode\" />\n    <MESSAGE value=\"baseurl\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"baseurl\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bbeecce3f5915a8487fc33c401cb39bca9ad55de)
++++ b/.idea/workspace.xml	(date 1659702637616)
+@@ -1,7 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="f579c2d7-92f3-4864-83a6-100354fb9177" name="Changes" comment="" />
++    <list default="true" id="f579c2d7-92f3-4864-83a6-100354fb9177" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/_posts/2022-08-05-distill.md" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/_posts/2018-12-22-distill.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-08-04-MLE.md" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -23,7 +27,14 @@
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="true" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
+     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
++    <property name="vue.rearranger.settings.migration" value="true" />
++  </component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/_posts" />
++    </key>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+@@ -37,6 +48,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1659568618349</updated>
+       <workItem from="1659568621903" duration="8547000" />
++      <workItem from="1659702348247" duration="289000" />
+     </task>
+     <task id="LOCAL-00001" summary="change prof img">
+       <created>1659569184171</created>
+@@ -85,6 +97,17 @@
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
