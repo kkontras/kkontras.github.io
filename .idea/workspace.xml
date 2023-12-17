@@ -5,59 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f579c2d7-92f3-4864-83a6-100354fb9177" name="Changes" comment="Dots">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kkontras.github.io.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-04-05-welcome-to-jekyll.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pdf/Konstantinos_Kontras_CV.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_biography_first_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/_biography_first_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/_main_header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_main_header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-09-28-twitter.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-09-28-twitter.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pdf/example_pdf.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2015/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2015/code/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2015/comments/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2015/comments/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2015/images/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2015/images/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2015/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2015/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2015/math/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2015/math/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2020/github-metadata/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2020/github-metadata/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2020/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2020/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2020/twitter/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2020/twitter/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021/diagrams/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2021/diagrams/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021/distill/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2021/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021/redirect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2021/redirect/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/category/external-services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/category/external-services/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/category/sample-posts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/category/sample-posts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/page/2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/page/3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tag/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tag/code/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tag/formatting/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tag/formatting/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tag/images/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tag/images/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tag/links/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tag/links/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tag/math/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tag/math/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/announcement_1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/news/announcement_1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/2_project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/2_project/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/4_project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/4_project/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publications/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/publications/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,12 +42,36 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/kontras/PycharmProjects/kkontras.github.io/_includes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_includes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="_biography_first_page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/kkontras.github.io/_includes/_biography_first_page.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/kkontras.github.io/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug._biography_first_page.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -97,6 +88,7 @@
       <workItem from="1680464929354" duration="612000" />
       <workItem from="1680706269596" duration="883000" />
       <workItem from="1702123881003" duration="48000" />
+      <workItem from="1702761146519" duration="9865000" />
     </task>
     <task id="LOCAL-00001" summary="change prof img">
       <created>1659569184171</created>

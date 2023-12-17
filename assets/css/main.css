@@ -67,7 +67,8 @@ html[data-theme='dark'] .repo-img-dark {
 body {
     padding-bottom: 70px;
     color: var(--global-text-color);
-    background-color: var(--global-bg-color)
+    background-color: var(--global-bg-color);
+    margin-top: 100px
 }
 
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -868,3 +869,118 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
         grid-column: none
     }
 }
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+.carousel-indicators li {
+    width: 30%; /* Width of each indicator */
+    height: 10%; /* Height of each indicator */
+    margin: 0 2%; /* Spacing between indicators */
+    background-color: var(--global-bg-color);
+; /* Color of inactive indicators */
+    border: 2px white; /* Style of the indicator border */
+    cursor: pointer; /* Changes cursor on hover */
+    -webkit-transition: all 0.6s ease-in;
+    -moz-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+    border-radius: 0;
+}
+
+.carousel-slide{
+    /*-webkit-transition: all 0.6s ease-in; */
+    /*-moz-transition: all 0.6s ease-in;*/
+    /*-o-transition: all 0.6s ease-in;*/
+    border-radius: 15vh; width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: inline-block; /* Always part of the layout */
+    /*visibility: hidden; !* Initially not visible *!*/
+    transition: transform 0.6s ease-in-out;
+    -webkit-backdrop-filter: brightness(0.4);
+    backdrop-filter: brightness(0.4);
+}
+
+#carousel_indicators{
+    width: 35%;
+    margin-bottom: 5vh;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.carousel-indicators li.active {
+    background-color: white; /* Color of the active indicator */
+}
+
+
+/*************************************************
+ *  Hero Widget
+ **************************************************/
+.wg-hero {
+    padding: 3em 0; }
+
+.hero-title {
+    font-size: 2.7rem;
+    margin-top: 0;
+    line-height: 1; }
+
+.hero-lead {
+    max-width: 768px;
+    font-size: 1.35rem; }
+
+.wg-hero.dark .hero-title,
+.wg-hero.dark .hero-lead,
+.wg-hero.dark .hero-cta-alt,
+.wg-hero.dark .hero-note > * {
+    color: #fff;
+    /* text-shadow: 1px 1px 4px rgba(0,0,0,0.5); */
+    /* Uncomment to standout on complicated backgrounds. */ }
+
+.wg-hero.light a.btn {
+    color: #fff; }
+
+.wg-hero.dark a:not(.wg-hero .btn) {
+    color: #fff; }
+
+.wg-hero .hero-lead a {
+    text-decoration: underline; }
+
+.wg-hero .cta-btns {
+    margin-bottom: 16px; }
+
+.wg-hero .btn {
+    padding: 0.6em 2.1em; }
+
+.wg-hero.dark .btn {
+    color: #104d92; }
+
+a.hero-cta-alt {
+    display: inline-block;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    font-size: 1.1rem; }
+
+a.hero-cta-alt:active,
+a.hero-cta-alt:focus,
+a.hero-cta-alt:hover {
+    transform: scale(1.1); }
+
+.wg-hero .btn-lg, .wg-hero .btn-group-lg > .btn {
+    font-size: 1.1rem; }
+
+.wg-hero .hero-note {
+    font-size: 0.8rem; }
+
+.hero-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center; }
