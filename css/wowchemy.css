@@ -9331,6 +9331,15 @@ ul.ul-edu li .description p.institution {
   max-width: 768px;
   font-size: 1.35rem; }
 
+@media (max-width: 576px) {
+  .hero-lead {
+    font-size: 1.0rem;
+  }
+  .hero-title {
+    font-size: 2.0rem;
+  }
+}
+
 .wg-hero.dark .hero-title,
 .wg-hero.dark .hero-lead,
 .wg-hero.dark .hero-cta-alt,
