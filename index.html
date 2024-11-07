@@ -163,7 +163,7 @@
                     Konstantinos Kontras</h2>
                 <h3 style="  font-size: 1.25em; font-family:Lato sans-serif; color: rgba(255, 255, 255, 0.54);">
                     PhD Researcher at
-                    <a href="https://www.esat.kuleuven.be/stadius/research.php?view=BioMed" target="_blank"
+                    <a href="https://biomed-kuleuven.web.app/" target="_blank"
                        rel="noopener noreferrer"> KU Leuven</a></h3>
 
             </div>
@@ -307,16 +307,15 @@
         console.log(slides[index].style)
 
         slides.forEach(slide => {
-            // slide.style.opacity = 1;
             slide.style.display = 'none';
             slide.style.visibility = 'hidden';
         });
 
-        // slides[index].style.opacity = 0;
         slides[index].style.display = 'block';
+        //TODO: Change this to manage to get gradually images in and out.
         setTimeout(function(){
             slides[index].style.visibility = 'visible';
-        }, 600);
+        }, 200);
         console.log(slides[index].style)
 
         // slides.forEach((slide, i) => {
