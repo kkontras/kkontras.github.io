@@ -414,7 +414,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #ffffff;
   word-wrap: break-word; }
   a > code {
     color: inherit; }
@@ -4200,6 +4200,13 @@ a.close.disabled {
     flex-shrink: 0; }
   .modal-dialog-scrollable .modal-body {
     overflow-y: auto; }
+
+.modal-body code {
+  color: var(--text-color, #ffffff); /* Uses Wowchemy’s text color variable */
+  padding: 10px;
+  font-size: 1em;
+  white-space: pre-wrap;
+}
 
 .modal-dialog-centered {
   display: flex;
