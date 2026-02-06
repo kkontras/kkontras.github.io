@@ -23,6 +23,7 @@
 
 
     <link rel="stylesheet" href="./css/wowchemy.css"/>
+    <link rel="stylesheet" href="./css/custom.css"/>
 
 
     <link rel="stylesheet" href="./css/libs/chroma/github-light.min.css" title="hl-light" media="print"
@@ -303,39 +304,10 @@
                         </p>
                         <h3 id="news">News</h3>
                         <!-- &rarr; [Post-doc vacancy](https://vacatures.uva.nl/UvA/job/Postdoctoral-Researcher-on-Deep-Learning-and-Dynamical-Systems%2C-PDEs%2C-for-Science-%282-years%29/750169202/) on Deep Learning for Neural PDE solvers, Dynamical Systems, Science.      -->
-                        <p>
-                            <i class="fas fa-award"></i> April 2025: <a href="https://cis.mit.edu/opportunities/faculty/global-seed-funds/gsf-application" target="_blank"
-                                                                      rel="noopener"><em>MIT-KU Leuven Seed Fund
-                        </em></a>- Awarded €30,000 (first personally written proposal) <br>
-                            <i class="fas fa-award"></i>  Febr 2025: Defended the PhD, officially a doctor! <br>
-                            <i class="far" aria-hidden="true">&#9999;</i> Jan 2025: New Arxiv <a href="https://arxiv.org/abs/2411.07335" target="_blank"
-                                                                                                 rel="noopener"><em>Multimodal Fusion Balancing Through Game-Theoretic Regularization
-                        </em></a> <br>
-                            <i class="far" aria-hidden="true">&#9999;</i> Dec 2024: Submitted the <a href="https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0" target="_blank"
-                                                                                                     rel="noopener">PhD Thesis</a> <br>
-
-                            <i class="fas fa-award"></i> Nov 2024: <a href="https://www.vscentrum.be/compute" target="_blank"
-                               rel="noopener"><em>VSC Tier-1 Compute Grant
-                            </em></a>- Awarded €40,000  <br>
-
-                            <i class="fas fa-video" aria-hidden="true"></i> Oct 2024: Seminar on Multimodal Competition soon on YouTube <br>
-
-                            <i class="far" aria-hidden="true">&#9999;</i> Jul 2024: New paper on BMVC24 <a href="https://arxiv.org/pdf/2405.07930" target="_blank"
-                                                                                                                        rel="noopener"><em>Improving Multimodal Learning with Multi-Loss Gradient Modulation
-                        </em></a>!  <br>
-
-<!--                            <i class="far fa-times-circle"></i> Jan 2024: CVPR got rejected due to necessity for additional experiments, we kept that to publish it all together with a solution. <br>-->
-
-<!--                            <i class="far" aria-hidden="true">&#9999;</i> Nov 2023: Recently submitted to CVPR 2024 doubting the benefits of multimodal learning from scratch. <br>-->
-
-                            <i class="fas fa-video" aria-hidden="true"></i>
-                            March 2023: Talk in the EU Parliament  <a href="https://www.eppgroup.eu/what-we-do/with-eu-countries/greece/european-health-tech-summit" target="_blank"
-                                             rel="noopener"> Health Tech Summit </a> on the role of ML/AI on future health systems. <br>
-
-                            <i class="far" aria-hidden="true">&#9999;</i>
-                            March 2023: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520" target="_blank"
-                                                  rel="noopener"><em>CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities
-                            </em></a> published in IEEE TSNRE.<br>
+                        <div id="news-list" class="news-list"></div>
+                        <noscript>
+                            <p>News updates are available when JavaScript is enabled.</p>
+                        </noscript>
                     </div>
                     <div class="row">
                     </div>
@@ -351,85 +323,21 @@
         <div class="home-section-bg ">
         </div>
 
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators" id="highlights-indicators"></ol>
 
-            <li data-target="#highlights" data-slide-to="0" class="active"></li>
-
-            <li data-target="#highlights" data-slide-to="1"></li>
-
-            <li data-target="#highlights" data-slide-to="2"></li>
-
-<!--            <li data-target="#highlights" data-slide-to="3"></li>-->
-
-<!--            <li data-target="#highlights" data-slide-to="4"></li>-->
-
-        </ol>
-
-        <div class="carousel-inner">
-
-
-            <div class="carousel-item active fullscreen"
-                 style=" background-color: #666; width:100%; background-size:cover; background-image: url('./media/core-site.drawio.png'); background-repeat: no-repeat; background-position: center; ">
-                <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center"
-                     style="-webkit-backdrop-filter: brightness(0.4); backdrop-filter: brightness(0.4);">
-                    <div class="wg-hero dark container"
-                         style="margin-left: 6rem; margin-right: 6rem; text-align: center;">
-                        <h1 class="hero-title">
-                            CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities
-                        </h1>
-                        <p class="hero-lead" style="margin: 0 auto 0 auto;">
-                            K. Kontras, C. Chatzichristos, J. Suykens, M. De Vos <br> IEEE TSNRE 2024
-                        </p>
-                        <p>
-                            <a href="https://github.com/kkontras/CoRe-Sleep/tree/main" class="btn btn-light btn-lg mt-3"><i
-                                    class="fab fa-github" style="padding-right: 10px;"></i>GitHub</a>
-                        </p>
-
+        <div class="carousel-inner" id="highlights-items"></div>
+        <noscript>
+            <div class="carousel-inner">
+                <div class="carousel-item active fullscreen">
+                    <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center">
+                        <div class="wg-hero dark container highlight-hero">
+                            <h1 class="hero-title">Highlights</h1>
+                            <p class="hero-lead">Enable JavaScript to load featured projects.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item fullscreen"
-                 style=" background-color: #666; width:100%; background-size:cover; background-image: url('./media/MLB_site.svg'); background-repeat: no-repeat; background-position: center; ">
-                <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center"
-                     style="-webkit-backdrop-filter: brightness(0.4); backdrop-filter: brightness(0.4);">
-                    <div class="wg-hero dark container"
-                         style="margin-left: 6rem; margin-right: 6rem; text-align: center;">
-                        <h1 class="hero-title">
-                            Improving Multimodal Learning with Multi-Loss Gradient Modulation
-                        </h1>
-                        <p class="hero-lead" style="margin: 0 auto 0 auto;">
-                            K. Kontras, C. Chatzichristos, M. Blaschko, M. De Vos <br> BMVC 2024
-                        </p>
-                        <p>
-                            <a href="https://github.com/kkontras/MLB" class="btn btn-light btn-lg mt-3"><i
-                                    class="fab fa-github" style="padding-right: 10px;"></i>GitHub</a>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item fullscreen"
-                 style=" background-color: #666; width:100%; background-size:cover; background-image: url('./media/MCR_Cover.svg'); background-repeat: no-repeat; background-position: center; ">
-                <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center"
-                     style="-webkit-backdrop-filter: brightness(0.4); backdrop-filter: brightness(0.4);">
-                    <div class="wg-hero dark container"
-                         style="margin-left: 6rem; margin-right: 6rem; text-align: center;">
-                        <h1 class="hero-title">
-                            Multimodal Fusion Balancing Through Game-Theoretic Regularization
-                        </h1>
-                        <p class="hero-lead" style="margin: 0 auto 0 auto;">
-                            K. Kontras, T. Strypsteen, C. Chatzichristos, <br> P.P. Liang, M. Blaschko, M. De Vos <br> ArXiv
-                        </p>
-<!--                         <p>
-                            <a href="https://github.com/kkontras/MCR" class="btn btn-light btn-lg mt-3"><i
-                                    class="fab fa-github" style="padding-right: 10px;"></i>GitHub</a>
-                        </p> -->
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        </noscript>
 
 
         <a class="carousel-control-prev" href="#highlights" data-slide="prev">
@@ -456,6 +364,9 @@
                 </div>
                 <div class="col-12 col-lg-8">
                     <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
                         <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
                         <span class="article-metadata li-cite-author">
                             <span>Konstantinos Kontras</span>,
@@ -472,6 +383,9 @@
                     </div>
 
                     <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
                         <a href="404.html"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
                         <span class="article-metadata li-cite-author">
                             <span>Konstantinos Kontras</span>,
@@ -487,6 +401,9 @@
                                 Cite</a>
                     </div>
                     <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
                         <a href="https://arxiv.org/pdf/2405.07930"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
                         <span class="article-metadata li-cite-author">
                             <span>Konstantinos Kontras</span>,
@@ -502,6 +419,9 @@
                             Cite</a>
                     </div>
                     <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
                         <a href="404.html"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
                         <span class="article-metadata li-cite-author">
                             <span>Konstantinos Kontras</span>,
@@ -623,5 +543,6 @@
     </div>
 </div>
 <script src="./js/wowchemy-publication.js" type="module"></script>
+<script src="./js/site-content.js"></script>
 </body>
 </html>
