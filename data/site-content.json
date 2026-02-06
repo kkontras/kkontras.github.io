@@ -1,0 +1,110 @@
+{
+  "news": [
+    {
+      "icon": "fas fa-award",
+      "text": "April 2025:",
+      "link": {
+        "label": "MIT-KU Leuven Seed Fund",
+        "url": "https://cis.mit.edu/opportunities/faculty/global-seed-funds/gsf-application",
+        "em": true
+      },
+      "suffix": "— Awarded €30,000 (first personally written proposal)."
+    },
+    {
+      "icon": "fas fa-award",
+      "text": "Febr 2025: Defended the PhD, officially a doctor!"
+    },
+    {
+      "icon": "far fa-pen-nib",
+      "text": "Jan 2025: New Arxiv",
+      "link": {
+        "label": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
+        "url": "https://arxiv.org/abs/2411.07335",
+        "em": true
+      },
+      "suffix": "."
+    },
+    {
+      "icon": "far fa-pen-nib",
+      "text": "Dec 2024: Submitted the",
+      "link": {
+        "label": "PhD Thesis",
+        "url": "https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0"
+      },
+      "suffix": "."
+    },
+    {
+      "icon": "fas fa-award",
+      "text": "Nov 2024:",
+      "link": {
+        "label": "VSC Tier-1 Compute Grant",
+        "url": "https://www.vscentrum.be/compute",
+        "em": true
+      },
+      "suffix": "— Awarded €40,000."
+    },
+    {
+      "icon": "fas fa-video",
+      "text": "Oct 2024: Seminar on Multimodal Competition soon on YouTube."
+    },
+    {
+      "icon": "far fa-pen-nib",
+      "text": "Jul 2024: New paper on BMVC24",
+      "link": {
+        "label": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
+        "url": "https://arxiv.org/pdf/2405.07930",
+        "em": true
+      },
+      "suffix": "."
+    },
+    {
+      "icon": "fas fa-video",
+      "text": "March 2023: Talk in the EU Parliament",
+      "link": {
+        "label": "Health Tech Summit",
+        "url": "https://www.eppgroup.eu/what-we-do/with-eu-countries/greece/european-health-tech-summit"
+      },
+      "suffix": "on the role of ML/AI on future health systems."
+    },
+    {
+      "icon": "far fa-pen-nib",
+      "text": "March 2023:",
+      "link": {
+        "label": "CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities",
+        "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520",
+        "em": true
+      },
+      "suffix": "published in IEEE TSNRE."
+    }
+  ],
+  "highlights": [
+    {
+      "title": "CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities",
+      "authors": "K. Kontras, C. Chatzichristos, J. Suykens, M. De Vos",
+      "venue": "IEEE TSNRE 2024",
+      "image": "./media/core-site.drawio.png",
+      "cta": {
+        "label": "GitHub",
+        "url": "https://github.com/kkontras/CoRe-Sleep/tree/main",
+        "icon": "fab fa-github"
+      }
+    },
+    {
+      "title": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
+      "authors": "K. Kontras, C. Chatzichristos, M. Blaschko, M. De Vos",
+      "venue": "BMVC 2024",
+      "image": "./media/MLB_site.svg",
+      "cta": {
+        "label": "GitHub",
+        "url": "https://github.com/kkontras/MLB",
+        "icon": "fab fa-github"
+      }
+    },
+    {
+      "title": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
+      "authors": "K. Kontras, T. Strypsteen, C. Chatzichristos, P.P. Liang, M. Blaschko, M. De Vos",
+      "venue": "ArXiv",
+      "image": "./media/MCR_Cover.svg"
+    }
+  ]
+}
