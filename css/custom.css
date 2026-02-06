@@ -62,8 +62,12 @@
 
 .pub-list-item {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   align-items: flex-start;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .pub-figure {
@@ -71,16 +75,56 @@
 }
 
 .pub-figure img {
-  width: 96px;
-  height: 72px;
-  border-radius: 12px;
+  width: 120px;
+  height: 88px;
+  border-radius: 14px;
   object-fit: cover;
   background: var(--kk-surface-muted);
   border: 1px solid rgba(148, 163, 184, 0.25);
 }
 
+.pub-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+.pub-meta .pub-icon {
+  font-size: 0.95rem;
+}
+
+.pub-year {
+  opacity: 0.7;
+}
+
+.pub-title a {
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.pub-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
 body.dark .pub-figure img {
   background: rgba(15, 23, 42, 0.4);
+  border-color: rgba(148, 163, 184, 0.18);
+}
+
+body.dark .pub-list-item {
+  background: rgba(15, 23, 42, 0.35);
   border-color: rgba(148, 163, 184, 0.18);
 }
 
