@@ -10,76 +10,143 @@
   <link rel="stylesheet" href="../../css/wowchemy.css"/>
   <link rel="stylesheet" href="../../css/custom.css"/>
   <style>
+    :root {
+      --page-bg: #f8fafc;
+      --text-main: #0f172a;
+      --text-subtle: #334155;
+      --card-bg: #ffffff;
+      --card-border: rgba(148, 163, 184, 0.35);
+      --link: #0ea5e9;
+      --link-hover: #0369a1;
+      --code-bg: #f1f5f9;
+      --error-bg: rgba(239, 68, 68, 0.1);
+      --error-border: rgba(239, 68, 68, 0.35);
+      --error-text: #991b1b;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    body.dark-mode {
+      --page-bg: #0f172a;
+      --text-main: #e2e8f0;
+      --text-subtle: #cbd5e1;
+      --card-bg: rgba(15, 23, 42, 0.85);
+      --card-border: rgba(148, 163, 184, 0.25);
+      --link: #7dd3fc;
+      --link-hover: #bae6fd;
+      --code-bg: rgba(15, 23, 42, 0.95);
+      --error-bg: rgba(239, 68, 68, 0.15);
+      --error-border: rgba(239, 68, 68, 0.4);
+      --error-text: #fecaca;
+      --shadow: 0 12px 30px rgba(2, 6, 23, 0.35);
+    }
+
     body {
-      background: #0f172a;
-      color: #e2e8f0;
+      background: var(--page-bg);
+      color: var(--text-main);
       font-family: "Lato", sans-serif;
       line-height: 1.75;
       margin: 0;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     .article-shell {
       max-width: 900px;
-      margin: 48px auto;
+      margin: 36px auto;
       padding: 0 24px 56px;
     }
 
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
     .article-card {
-      background: rgba(15, 23, 42, 0.82);
-      border: 1px solid rgba(148, 163, 184, 0.22);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 14px;
       padding: 32px;
-      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.35);
+      box-shadow: var(--shadow);
     }
 
     h1 {
+      color: var(--text-main);
       font-size: clamp(1.8rem, 2.8vw, 2.6rem);
       margin-bottom: 0.75rem;
     }
 
     h2, h3, h4 {
+      color: var(--text-main);
       margin-top: 2rem;
       margin-bottom: 0.85rem;
     }
 
     p, li {
-      color: #dbeafe;
+      color: var(--text-subtle);
     }
 
-    a { color: #7dd3fc; }
-    a:hover { color: #bae6fd; }
+    a { color: var(--link); }
+    a:hover { color: var(--link-hover); }
 
     .back-link {
       display: inline-block;
-      margin-bottom: 1rem;
       font-size: 0.95rem;
       text-decoration: none;
     }
 
+    .theme-toggle {
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text-main);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
     .error {
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid rgba(239, 68, 68, 0.4);
+      background: var(--error-bg);
+      border: 1px solid var(--error-border);
       border-radius: 10px;
       padding: 14px;
-      color: #fecaca;
+      color: var(--error-text);
     }
 
     pre {
-      background: rgba(15, 23, 42, 0.95);
+      background: var(--code-bg);
       border-radius: 8px;
       padding: 12px;
       overflow-x: auto;
-      color: #e2e8f0;
+      color: var(--text-main);
     }
 
     hr {
-      border-color: rgba(148, 163, 184, 0.25);
+      border-color: var(--card-border);
+    }
+
+    #article-root p:has(> a[id]) {
+      margin: 0;
+    }
+
+    #article-root .references-list {
+      margin-top: 0.5rem;
+      padding-left: 1.1rem;
+    }
+
+    #article-root .references-list li {
+      margin-bottom: 0.55rem;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <main class="article-shell">
-    <a class="back-link" href="../../index.html#philosophy">← Back to Philosophical Articles</a>
+    <div class="toolbar">
+      <a class="back-link" href="../../index.html#philosophy">← Back to Philosophical Articles</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Switch to dark mode</button>
+    </div>
     <article class="article-card">
       <div id="article-root">Loading article…</div>
     </article>
@@ -87,6 +154,51 @@
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
+    (function () {
+      const storageKey = 'philosophy-article-theme';
+      const toggleButton = document.getElementById('theme-toggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem(storageKey);
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+      function setTheme(theme) {
+        document.body.classList.toggle('dark-mode', theme === 'dark');
+        toggleButton.textContent = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        localStorage.setItem(storageKey, theme);
+      }
+
+      setTheme(initialTheme);
+      toggleButton.addEventListener('click', function () {
+        const next = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+        setTheme(next);
+      });
+    })();
+  </script>
+
+  <script>
+    function formatReferences(root) {
+      const refsHeading = Array.from(root.querySelectorAll('h2, h3')).find((el) => el.textContent.trim().toLowerCase() === 'references');
+      if (!refsHeading) return;
+
+      let cursor = refsHeading.nextElementSibling;
+      if (!cursor || cursor.tagName.toLowerCase() !== 'p') return;
+
+      const html = cursor.innerHTML;
+      const matches = html.match(/<a id="[^"]+"><\/a>[^<]+(?:<em>[^<]*<\/em>[^<]*)?/g);
+      if (!matches || !matches.length) return;
+
+      const list = document.createElement('ol');
+      list.className = 'references-list';
+
+      matches.forEach((entry) => {
+        const li = document.createElement('li');
+        li.innerHTML = entry.trim();
+        list.appendChild(li);
+      });
+
+      cursor.replaceWith(list);
+    }
+
     (async function () {
       const root = document.getElementById('article-root');
       const params = new URLSearchParams(window.location.search);
@@ -96,10 +208,12 @@
       try {
         const response = await fetch(source);
         if (!response.ok) throw new Error(`Failed to load ${source} (${response.status})`);
-        const raw = await response.text();
+        let raw = await response.text();
 
         if (extension === 'md' || extension === 'markdown') {
+          raw = raw.replaceAll(' <a id="', '\n<a id="');
           root.innerHTML = window.marked.parse(raw);
+          formatReferences(root);
 
           const titleHeading = root.querySelector('h1');
           if (titleHeading && titleHeading.textContent.trim()) {
@@ -117,7 +231,7 @@
           root.innerHTML = `<h1>${source}</h1><p>TeX source preview:</p><pre>${raw
             .replaceAll('&', '&amp;')
             .replaceAll('<', '&lt;')
-            .replaceAll('>', '&gt;')}</pre><p>Tip: for rich math rendering, include TeX equations in Markdown and they will be rendered by MathJax.</p>`;
+            .replaceAll('>', '&gt;')}</pre><p>Tip: for full TeX article conversion, add a build step (for example Pandoc) before deployment.</p>`;
           return;
         }
 
