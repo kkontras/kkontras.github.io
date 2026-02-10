@@ -192,6 +192,29 @@ body.dark .pub-list-item {
   border-color: rgba(148, 163, 184, 0.18);
 }
 
+
+.highlight-content {
+  max-width: 980px;
+}
+
+.highlight-content .hero-title {
+  min-height: 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-content .hero-lead {
+  min-height: 3.5rem;
+}
+
+.highlight-cta-group {
+  display: inline-flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .highlight-overlay {
   backdrop-filter: blur(2px) brightness(0.6);
 }
@@ -222,5 +245,10 @@ body.dark #profile {
 
   .highlight-hero {
     margin: 0 2rem;
+  }
+
+  .highlight-content .hero-title,
+  .highlight-content .hero-lead {
+    min-height: 0;
   }
 }
