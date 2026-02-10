@@ -10,43 +10,8 @@
   <link rel="stylesheet" href="../../css/wowchemy.css"/>
   <link rel="stylesheet" href="../../css/custom.css"/>
   <style>
-    :root {
-      --page-bg: #f8fafc;
-      --text-main: #0f172a;
-      --text-subtle: #334155;
-      --card-bg: #ffffff;
-      --card-border: rgba(148, 163, 184, 0.35);
-      --link: #0ea5e9;
-      --link-hover: #0369a1;
-      --code-bg: #f1f5f9;
-      --error-bg: rgba(239, 68, 68, 0.1);
-      --error-border: rgba(239, 68, 68, 0.35);
-      --error-text: #991b1b;
-      --shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-    }
-
-    body.dark-mode {
-      --page-bg: #0f172a;
-      --text-main: #e2e8f0;
-      --text-subtle: #cbd5e1;
-      --card-bg: rgba(15, 23, 42, 0.85);
-      --card-border: rgba(148, 163, 184, 0.25);
-      --link: #7dd3fc;
-      --link-hover: #bae6fd;
-      --code-bg: rgba(15, 23, 42, 0.95);
-      --error-bg: rgba(239, 68, 68, 0.15);
-      --error-border: rgba(239, 68, 68, 0.4);
-      --error-text: #fecaca;
-      --shadow: 0 12px 30px rgba(2, 6, 23, 0.35);
-    }
-
-    body {
-      background: var(--page-bg);
-      color: var(--text-main);
-      font-family: "Lato", sans-serif;
-      line-height: 1.75;
-      margin: 0;
-      transition: background 0.2s ease, color 0.2s ease;
+    body.page-wrapper {
+      min-height: 100vh;
     }
 
     .article-shell {
@@ -63,32 +28,45 @@
       margin-bottom: 1rem;
     }
 
+    .theme-icon-btn {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0.25rem 0.45rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .theme-icon-btn i {
+      font-size: 1.05rem;
+    }
+
     .article-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
       border-radius: 14px;
       padding: 32px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
     }
 
-    h1 {
-      color: var(--text-main);
-      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
-      margin-bottom: 0.75rem;
+    body.dark .article-card {
+      background: rgba(15, 23, 42, 0.35);
+      border-color: rgba(148, 163, 184, 0.18);
+      box-shadow: 0 16px 40px rgba(2, 6, 23, 0.4);
     }
 
-    h2, h3, h4 {
-      color: var(--text-main);
-      margin-top: 2rem;
-      margin-bottom: 0.85rem;
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark h4 {
+      color: #e2e8f0;
     }
 
-    p, li {
-      color: var(--text-subtle);
+    body.dark p,
+    body.dark li {
+      color: #dbeafe;
     }
-
-    a { color: var(--link); }
-    a:hover { color: var(--link-hover); }
 
     .back-link {
       display: inline-block;
@@ -96,38 +74,21 @@
       text-decoration: none;
     }
 
-    .theme-toggle {
-      border: 1px solid var(--card-border);
-      background: var(--card-bg);
-      color: var(--text-main);
-      border-radius: 999px;
-      padding: 0.4rem 0.9rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
     .error {
-      background: var(--error-bg);
-      border: 1px solid var(--error-border);
       border-radius: 10px;
       padding: 14px;
-      color: var(--error-text);
     }
 
-    pre {
-      background: var(--code-bg);
-      border-radius: 8px;
-      padding: 12px;
-      overflow-x: auto;
-      color: var(--text-main);
+    body.light .error {
+      background: rgba(239, 68, 68, 0.10);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #991b1b;
     }
 
-    hr {
-      border-color: var(--card-border);
-    }
-
-    #article-root p:has(> a[id]) {
-      margin: 0;
+    body.dark .error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fecaca;
     }
 
     #article-root .references-list {
@@ -136,18 +97,35 @@
     }
 
     #article-root .references-list li {
-      margin-bottom: 0.55rem;
-      line-height: 1.6;
+      margin-bottom: 0.7rem;
+      line-height: 1.65;
+    }
+
+    pre {
+      border-radius: 8px;
+      padding: 12px;
+      overflow-x: auto;
+    }
+
+    body.light pre {
+      background: #f1f5f9;
+    }
+
+    body.dark pre {
+      background: rgba(15, 23, 42, 0.95);
+      color: #e2e8f0;
     }
   </style>
 </head>
-<body>
+<body id="top" class="page-wrapper dark">
   <main class="article-shell">
     <div class="toolbar">
       <a class="back-link" href="../../index.html#philosophy">← Back to Philosophical Articles</a>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Switch to dark mode</button>
+      <button id="theme-toggle" class="theme-icon-btn" type="button" aria-label="Toggle dark and light mode" title="Toggle dark/light mode">
+        <i id="theme-toggle-icon" class="fas fa-sun" aria-hidden="true"></i>
+      </button>
     </div>
-    <article class="article-card">
+    <article class="article-card article-style">
       <div id="article-root">Loading article…</div>
     </article>
   </main>
@@ -157,19 +135,22 @@
     (function () {
       const storageKey = 'philosophy-article-theme';
       const toggleButton = document.getElementById('theme-toggle');
+      const icon = document.getElementById('theme-toggle-icon');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const savedTheme = localStorage.getItem(storageKey);
       const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
       function setTheme(theme) {
-        document.body.classList.toggle('dark-mode', theme === 'dark');
-        toggleButton.textContent = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        document.body.classList.remove('dark', 'light');
+        document.body.classList.add(theme);
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        toggleButton.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
         localStorage.setItem(storageKey, theme);
       }
 
       setTheme(initialTheme);
       toggleButton.addEventListener('click', function () {
-        const next = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+        const next = document.body.classList.contains('dark') ? 'light' : 'dark';
         setTheme(next);
       });
     })();
@@ -184,15 +165,19 @@
       if (!cursor || cursor.tagName.toLowerCase() !== 'p') return;
 
       const html = cursor.innerHTML;
-      const matches = html.match(/<a id="[^"]+"><\/a>[^<]+(?:<em>[^<]*<\/em>[^<]*)?/g);
-      if (!matches || !matches.length) return;
+      const chunks = html
+        .split(/(?=<a id="[^"]+"><\/a>)/g)
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+      if (!chunks.length) return;
 
       const list = document.createElement('ol');
       list.className = 'references-list';
 
-      matches.forEach((entry) => {
+      chunks.forEach((entry) => {
         const li = document.createElement('li');
-        li.innerHTML = entry.trim();
+        li.innerHTML = entry;
         list.appendChild(li);
       });
 
