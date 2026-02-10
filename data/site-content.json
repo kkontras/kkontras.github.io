@@ -8,14 +8,14 @@
         "url": "https://cis.mit.edu/opportunities/faculty/global-seed-funds/gsf-application",
         "em": true
       },
-      "suffix": "— Awarded €30,000 (first personally written proposal)."
+      "suffix": "\u2014 Awarded \u20ac30,000 (first personally written proposal)."
     },
     {
       "icon": "fas fa-award",
       "text": "Febr 2025: Defended the PhD, officially a doctor!"
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "Jan 2025: New Arxiv",
       "link": {
         "label": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
@@ -25,7 +25,7 @@
       "suffix": "."
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "Dec 2024: Submitted the",
       "link": {
         "label": "PhD Thesis",
@@ -41,14 +41,14 @@
         "url": "https://www.vscentrum.be/compute",
         "em": true
       },
-      "suffix": "— Awarded €40,000."
+      "suffix": "\u2014 Awarded \u20ac40,000."
     },
     {
       "icon": "fas fa-video",
       "text": "Oct 2024: Seminar on Multimodal Competition soon on YouTube."
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "Jul 2024: New paper on BMVC24",
       "link": {
         "label": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
@@ -67,7 +67,7 @@
       "suffix": "on the role of ML/AI on future health systems."
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "March 2023:",
       "link": {
         "label": "CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities",
@@ -83,28 +83,24 @@
       "authors": "K. Kontras, C. Chatzichristos, J. Suykens, M. De Vos",
       "venue": "IEEE TSNRE 2024",
       "image": "./media/core-site.drawio.png",
-      "cta": {
-        "label": "GitHub",
-        "url": "https://github.com/kkontras/CoRe-Sleep/tree/main",
-        "icon": "fab fa-github"
-      }
+      "code_url": "https://github.com/kkontras/CoRe-Sleep/tree/main",
+      "paper_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520"
     },
     {
       "title": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
       "authors": "K. Kontras, C. Chatzichristos, M. Blaschko, M. De Vos",
       "venue": "BMVC 2024",
       "image": "./media/MLB_site.svg",
-      "cta": {
-        "label": "GitHub",
-        "url": "https://github.com/kkontras/MLB",
-        "icon": "fab fa-github"
-      }
+      "code_url": "https://github.com/kkontras/MLB",
+      "paper_url": "https://arxiv.org/pdf/2405.07930"
     },
     {
       "title": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
       "authors": "K. Kontras, T. Strypsteen, C. Chatzichristos, P.P. Liang, M. Blaschko, M. De Vos",
       "venue": "ArXiv",
-      "image": "./media/MCR_Cover.svg"
+      "image": "./media/MCR_Cover.svg",
+      "code_url": "https://github.com/kkontras",
+      "paper_url": "https://arxiv.org/abs/2411.07335"
     }
   ]
 }

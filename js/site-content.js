@@ -91,7 +91,7 @@
       overlay.className = 'highlight-overlay position-absolute d-flex w-100 h-100 justify-content-center align-items-center';
 
       const hero = document.createElement('div');
-      hero.className = 'wg-hero dark container highlight-hero';
+      hero.className = 'wg-hero dark container highlight-hero highlight-content';
 
       const title = document.createElement('h1');
       title.className = 'hero-title';
@@ -104,22 +104,34 @@
       hero.appendChild(title);
       hero.appendChild(meta);
 
-      if (item.cta && item.cta.url) {
-        const cta = document.createElement('a');
-        cta.className = 'btn btn-light btn-lg mt-3 highlight-cta';
-        cta.href = item.cta.url;
-        cta.target = '_blank';
-        cta.rel = 'noopener';
+      const ctaGroup = document.createElement('div');
+      ctaGroup.className = 'highlight-cta-group mt-3';
 
-        if (item.cta.icon) {
-          const iconEl = document.createElement('i');
-          iconEl.className = item.cta.icon;
-          iconEl.style.paddingRight = '10px';
-          cta.appendChild(iconEl);
-        }
+      const addButton = (label, url, iconClass) => {
+        const button = document.createElement('a');
+        button.className = 'btn btn-light btn-lg highlight-cta';
+        button.href = url;
+        button.target = '_blank';
+        button.rel = 'noopener';
 
-        cta.append(item.cta.label || 'Learn more');
-        hero.appendChild(cta);
+        const iconEl = document.createElement('i');
+        iconEl.className = iconClass;
+        iconEl.style.paddingRight = '10px';
+        button.appendChild(iconEl);
+        button.append(label);
+        ctaGroup.appendChild(button);
+      };
+
+      if (item.code_url) {
+        addButton('Code', item.code_url, 'fab fa-github');
+      }
+
+      if (item.paper_url) {
+        addButton('Paper', item.paper_url, 'fas fa-file-alt');
+      }
+
+      if (ctaGroup.childNodes.length > 0) {
+        hero.appendChild(ctaGroup);
       }
 
       overlay.appendChild(hero);

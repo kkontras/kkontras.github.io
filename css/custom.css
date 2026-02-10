@@ -1,8 +1,40 @@
 :root {
   --kk-accent: #3b82f6;
-  --kk-surface: #ffffff;
-  --kk-surface-muted: #f6f7fb;
+  --kk-surface: #f2f5fb;
+  --kk-surface-muted: #e9eef6;
   --kk-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+}
+
+
+.theme-icon-btn {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.theme-icon-btn i {
+  font-size: 1rem;
+}
+
+#about .article-style a,
+.news-item a {
+  color: #1565c0;
+  text-decoration: none;
+}
+
+body.dark #about .article-style a,
+body.dark .news-item a {
+  color: #bbdefb;
+}
+
+#about .article-style a:hover,
+#about .article-style a:focus,
+.news-item a:hover,
+.news-item a:focus {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 #about .home-section-bg {
@@ -126,7 +158,28 @@
 }
 
 body.light {
-  background: #f3ede2;
+  background: #e9eef6;
+}
+
+body.light #about .home-section-bg {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.10), transparent 60%);
+}
+
+body.light #profile {
+  background: #f2f5fb;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+}
+
+body.light .news-item {
+  background: rgba(233, 238, 246, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+body.light .pub-list-item {
+  background: rgba(242, 245, 251, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.16);
 }
 
 body.dark .pub-figure img {
@@ -137,6 +190,36 @@ body.dark .pub-figure img {
 body.dark .pub-list-item {
   background: rgba(15, 23, 42, 0.35);
   border-color: rgba(148, 163, 184, 0.18);
+}
+
+
+.highlight-content {
+  max-width: 980px;
+}
+
+.highlight-content .hero-title {
+  min-height: 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-content .hero-lead {
+  min-height: 3.5rem;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.highlight-cta-group {
+  display: inline-flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .highlight-overlay {
@@ -169,5 +252,10 @@ body.dark #profile {
 
   .highlight-hero {
     margin: 0 2rem;
+  }
+
+  .highlight-content .hero-title,
+  .highlight-content .hero-lead {
+    min-height: 0;
   }
 }
