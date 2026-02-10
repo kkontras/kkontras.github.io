@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Philosophical Article</title>
+  <meta name="description" content="Auto-rendered philosophical article from Markdown or TeX source."/>
+  <link rel="stylesheet" href="../../css/vendor-bundle.min.css"/>
+  <link rel="stylesheet" href="../../css/wowchemy.css"/>
+  <link rel="stylesheet" href="../../css/custom.css"/>
+  <style>
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: "Lato", sans-serif;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .article-shell {
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 24px 56px;
+    }
+
+    .article-card {
+      background: rgba(15, 23, 42, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.35);
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      margin-bottom: 0.75rem;
+    }
+
+    h2, h3, h4 {
+      margin-top: 2rem;
+      margin-bottom: 0.85rem;
+    }
+
+    p, li {
+      color: #dbeafe;
+    }
+
+    a { color: #7dd3fc; }
+    a:hover { color: #bae6fd; }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      border-radius: 10px;
+      padding: 14px;
+      color: #fecaca;
+    }
+
+    pre {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 8px;
+      padding: 12px;
+      overflow-x: auto;
+      color: #e2e8f0;
+    }
+
+    hr {
+      border-color: rgba(148, 163, 184, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <main class="article-shell">
+    <a class="back-link" href="../../index.html#philosophy">← Back to Philosophical Articles</a>
+    <article class="article-card">
+      <div id="article-root">Loading article…</div>
+    </article>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (async function () {
+      const root = document.getElementById('article-root');
+      const params = new URLSearchParams(window.location.search);
+      const source = params.get('src') || 'phmind_intelligence.md';
+      const extension = source.split('.').pop().toLowerCase();
+
+      try {
+        const response = await fetch(source);
+        if (!response.ok) throw new Error(`Failed to load ${source} (${response.status})`);
+        const raw = await response.text();
+
+        if (extension === 'md' || extension === 'markdown') {
+          root.innerHTML = window.marked.parse(raw);
+
+          const titleHeading = root.querySelector('h1');
+          if (titleHeading && titleHeading.textContent.trim()) {
+            document.title = titleHeading.textContent.trim();
+          }
+
+          if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise([root]).catch(() => {});
+          }
+          return;
+        }
+
+        if (extension === 'tex') {
+          document.title = source;
+          root.innerHTML = `<h1>${source}</h1><p>TeX source preview:</p><pre>${raw
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')}</pre><p>Tip: for rich math rendering, include TeX equations in Markdown and they will be rendered by MathJax.</p>`;
+          return;
+        }
+
+        root.innerHTML = `<div class="error">Unsupported file type: <code>${extension}</code>. Please use <code>.md</code> or <code>.tex</code>.</div>`;
+      } catch (error) {
+        root.innerHTML = `<div class="error">Could not load article source <code>${source}</code>.<br/>${error.message}</div>`;
+      }
+    })();
+  </script>
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
