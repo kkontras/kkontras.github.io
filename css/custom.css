@@ -206,6 +206,13 @@ body.dark .pub-list-item {
 
 .highlight-content .hero-lead {
   min-height: 3.5rem;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .highlight-cta-group {
