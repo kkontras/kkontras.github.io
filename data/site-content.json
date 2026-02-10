@@ -15,15 +15,6 @@
       "suffix": " €30k."
     },
     {
-      "icon": "fas fa-file-alt",
-      "text": "Febr 2025: Defended the",
-      "link": {
-        "label": " PhD",
-        "url": "https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0"
-      },
-      "suffix": ", officially a doctor!"
-    },
-    {
       "icon": "far fa-file-alt",
       "text": "Dec 2025: NeurIPS Spotlight ",
       "link": {
@@ -31,6 +22,15 @@
         "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/117227",
         "em": true
       }
+    },
+    {
+      "icon": "fas fa-file-alt",
+      "text": "Febr 2025: Defended the",
+      "link": {
+        "label": " PhD",
+        "url": "https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0"
+      },
+      "suffix": ", officially a doctor!"
     },
     {
       "icon": "fas fa-award",
