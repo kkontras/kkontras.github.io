@@ -81,7 +81,7 @@
     {
       "title": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
       "authors": "K. Kontras, T. Strypsteen, C. Chatzichristos, P.P. Liang, M. Blaschko, M. De Vos",
-      "venue": "ArXiv",
+      "venue": "Spotlight at NeurIPS 2025",
       "image": "./media/MCR_Cover.svg",
       "code_url": "https://github.com/kkontras/MCR",
       "paper_url": "https://arxiv.org/abs/2411.07335"
