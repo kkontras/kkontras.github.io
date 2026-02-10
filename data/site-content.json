@@ -15,7 +15,7 @@
       "text": "Febr 2025: Defended the PhD, officially a doctor!"
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "Jan 2025: New Arxiv",
       "link": {
         "label": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
@@ -25,7 +25,7 @@
       "suffix": "."
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "Dec 2024: Submitted the",
       "link": {
         "label": "PhD Thesis",
@@ -48,7 +48,7 @@
       "text": "Oct 2024: Seminar on Multimodal Competition soon on YouTube."
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "Jul 2024: New paper on BMVC24",
       "link": {
         "label": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
@@ -67,7 +67,7 @@
       "suffix": "on the role of ML/AI on future health systems."
     },
     {
-      "icon": "far fa-pen-nib",
+      "icon": "far fa-file-alt",
       "text": "March 2023:",
       "link": {
         "label": "CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities",

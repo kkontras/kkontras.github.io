@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Philosophical Article</title>
+  <meta name="description" content="Auto-rendered philosophical article from Markdown or TeX source."/>
+  <link rel="stylesheet" href="../../css/vendor-bundle.min.css"/>
+  <link rel="stylesheet" href="../../css/wowchemy.css"/>
+  <link rel="stylesheet" href="../../css/custom.css"/>
+  <style>
+    body.page-wrapper {
+      min-height: 100vh;
+    }
+
+    .article-shell {
+      max-width: 900px;
+      margin: 36px auto;
+      padding: 0 24px 56px;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .theme-icon-btn {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0.25rem 0.45rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .theme-icon-btn i {
+      font-size: 1.05rem;
+    }
+
+    .article-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    body.dark .article-card {
+      background: rgba(15, 23, 42, 0.35);
+      border-color: rgba(148, 163, 184, 0.18);
+      box-shadow: 0 16px 40px rgba(2, 6, 23, 0.4);
+    }
+
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark h4 {
+      color: #e2e8f0;
+    }
+
+    body.dark p,
+    body.dark li {
+      color: #dbeafe;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .error {
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    body.light .error {
+      background: rgba(239, 68, 68, 0.10);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #991b1b;
+    }
+
+    body.dark .error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fecaca;
+    }
+
+    #article-root .references-list {
+      margin-top: 0.5rem;
+      padding-left: 1.1rem;
+    }
+
+    #article-root .references-list li {
+      margin-bottom: 0.7rem;
+      line-height: 1.65;
+    }
+
+    pre {
+      border-radius: 8px;
+      padding: 12px;
+      overflow-x: auto;
+    }
+
+    body.light pre {
+      background: #f1f5f9;
+    }
+
+    body.dark pre {
+      background: rgba(15, 23, 42, 0.95);
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body id="top" class="page-wrapper dark">
+  <main class="article-shell">
+    <div class="toolbar">
+      <a class="back-link" href="../../index.html#philosophy">← Back to Philosophical Articles</a>
+      <button id="theme-toggle" class="theme-icon-btn" type="button" aria-label="Toggle dark and light mode" title="Toggle dark/light mode">
+        <i id="theme-toggle-icon" class="fas fa-sun" aria-hidden="true"></i>
+      </button>
+    </div>
+    <article class="article-card article-style">
+      <div id="article-root">Loading article…</div>
+    </article>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (function () {
+      const storageKey = 'philosophy-article-theme';
+      const toggleButton = document.getElementById('theme-toggle');
+      const icon = document.getElementById('theme-toggle-icon');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem(storageKey);
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+      function setTheme(theme) {
+        document.body.classList.remove('dark', 'light');
+        document.body.classList.add(theme);
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        toggleButton.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        localStorage.setItem(storageKey, theme);
+      }
+
+      setTheme(initialTheme);
+      toggleButton.addEventListener('click', function () {
+        const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+        setTheme(next);
+      });
+    })();
+  </script>
+
+  <script>
+    function formatReferences(root) {
+      const refsHeading = Array.from(root.querySelectorAll('h2, h3')).find((el) => el.textContent.trim().toLowerCase() === 'references');
+      if (!refsHeading) return;
+
+      let cursor = refsHeading.nextElementSibling;
+      if (!cursor || cursor.tagName.toLowerCase() !== 'p') return;
+
+      const html = cursor.innerHTML;
+      const chunks = html
+        .split(/(?=<a id="[^"]+"><\/a>)/g)
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+      if (!chunks.length) return;
+
+      const list = document.createElement('ol');
+      list.className = 'references-list';
+
+      chunks.forEach((entry) => {
+        const li = document.createElement('li');
+        li.innerHTML = entry;
+        list.appendChild(li);
+      });
+
+      cursor.replaceWith(list);
+    }
+
+    (async function () {
+      const root = document.getElementById('article-root');
+      const params = new URLSearchParams(window.location.search);
+      const source = params.get('src') || 'phmind_intelligence.md';
+      const extension = source.split('.').pop().toLowerCase();
+
+      try {
+        const response = await fetch(source);
+        if (!response.ok) throw new Error(`Failed to load ${source} (${response.status})`);
+        let raw = await response.text();
+
+        if (extension === 'md' || extension === 'markdown') {
+          raw = raw.replaceAll(' <a id="', '\n<a id="');
+          root.innerHTML = window.marked.parse(raw);
+          formatReferences(root);
+
+          const titleHeading = root.querySelector('h1');
+          if (titleHeading && titleHeading.textContent.trim()) {
+            document.title = titleHeading.textContent.trim();
+          }
+
+          if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise([root]).catch(() => {});
+          }
+          return;
+        }
+
+        if (extension === 'tex') {
+          document.title = source;
+          root.innerHTML = `<h1>${source}</h1><p>TeX source preview:</p><pre>${raw
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')}</pre><p>Tip: for full TeX article conversion, add a build step (for example Pandoc) before deployment.</p>`;
+          return;
+        }
+
+        root.innerHTML = `<div class="error">Unsupported file type: <code>${extension}</code>. Please use <code>.md</code> or <code>.tex</code>.</div>`;
+      } catch (error) {
+        root.innerHTML = `<div class="error">Could not load article source <code>${source}</code>.<br/>${error.message}</div>`;
+      }
+    })();
+  </script>
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
