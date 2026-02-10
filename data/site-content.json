@@ -16,7 +16,7 @@
     },
     {
       "icon": "far fa-file-alt",
-      "text": "Dec 2025: NeurIPS Spotlight ",
+      "text": "Dec 2025: Neurips Spotlight ",
       "link": {
         "label": "Balancing multimodal training through game-theoretic regularization",
         "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/117227",
@@ -63,28 +63,28 @@
   ],
   "highlights": [
     {
+      "title": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
+      "authors": "K. Kontras, T. Strypsteen, C. Chatzichristos, P.P. Liang, M. Blaschko, M. De Vos",
+      "venue": "Spotlight at Neurips 2025",
+      "image": "./media/MCR_Cover.svg",
+      "code_url": "https://github.com/kkontras/MCR",
+      "paper_url": "https://arxiv.org/abs/2411.07335"
+    },
+    {
+      "title": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
+      "authors": "K. Kontras, C. Chatzichristos, M. Blaschko, M. De Vos",
+      "venue": "BMVC 2024 & IJCV 2026",
+      "image": "./media/MLB_site.svg",
+      "code_url": "https://github.com/kkontras/MLB",
+      "paper_url": "https://arxiv.org/pdf/2405.07930"
+    },
+    {
       "title": "CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities",
       "authors": "K. Kontras, C. Chatzichristos, J. Suykens, M. De Vos",
       "venue": "IEEE TSNRE 2024",
       "image": "./media/core-site.drawio.png",
       "code_url": "https://github.com/kkontras/CoRe-Sleep/tree/main",
       "paper_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520"
-    },
-    {
-      "title": "Improving Multimodal Learning with Multi-Loss Gradient Modulation",
-      "authors": "K. Kontras, C. Chatzichristos, M. Blaschko, M. De Vos",
-      "venue": "BMVC 2024",
-      "image": "./media/MLB_site.svg",
-      "code_url": "https://github.com/kkontras/MLB",
-      "paper_url": "https://arxiv.org/pdf/2405.07930"
-    },
-    {
-      "title": "Multimodal Fusion Balancing Through Game-Theoretic Regularization",
-      "authors": "K. Kontras, T. Strypsteen, C. Chatzichristos, P.P. Liang, M. Blaschko, M. De Vos",
-      "venue": "Spotlight at NeurIPS 2025",
-      "image": "./media/MCR_Cover.svg",
-      "code_url": "https://github.com/kkontras/MCR",
-      "paper_url": "https://arxiv.org/abs/2411.07335"
     }
   ]
 }
