@@ -12,29 +12,25 @@
         "url": "https://cis.mit.edu/opportunities/faculty/global-seed-funds/gsf-application",
         "em": true
       },
-      "suffix": " Awarded €30k."
+      "suffix": " €30k."
     },
     {
-      "icon": "fas fa-award",
-      "text": "Febr 2025: Defended the PhD, officially a doctor!"
-    },
-    {
-      "icon": "far fa-file-alt",
-      "text": "Jan 2025: New Arxiv",
+      "icon": "fas fa-file-alt",
+      "text": "Febr 2025: Defended the",
       "link": {
-        "label": "-Thesis",
+        "label": " PhD",
         "url": "https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0"
-      }
+      },
+      "suffix": ", officially a doctor!"
     },
     {
       "icon": "far fa-file-alt",
-      "text": "Dec 2024: Submitted the",
+      "text": "Dec 2025: NeurIPS Spotlight ",
       "link": {
         "label": "Balancing multimodal training through game-theoretic regularization",
         "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/117227",
         "em": true
-      },
-      "suffix": "."
+      }
     },
     {
       "icon": "fas fa-award",
@@ -48,17 +44,12 @@
     },
     {
       "icon": "fas fa-video",
-      "text": "Oct 2024: Seminar on Multimodal Competition soon on YouTube."
-    },
-    {
-      "icon": "far fa-file-alt",
-      "text": "Jul 2024: New paper on BMVC24",
+      "text": "Oct 2024: ",
       "link": {
         "label": "Seminar on Multimodal Competition",
         "url": "https://www.youtube.com/watch?v=pFL7BMmyZ1o&t=24s",
         "em": true
-      },
-      "suffix": "."
+      }
     },
     {
       "icon": "fas fa-video",
@@ -67,17 +58,7 @@
         "label": "Health Tech Summit",
         "url": "https://www.eppgroup.eu/what-we-do/with-eu-countries/greece/european-health-tech-summit"
       },
-      "suffix": "on the role of ML/AI on future health systems."
-    },
-    {
-      "icon": "far fa-file-alt",
-      "text": "March 2023:",
-      "link": {
-        "label": "CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities",
-        "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520",
-        "em": true
-      },
-      "suffix": "published in IEEE TSNRE."
+      "suffix": "on future health systems."
     }
   ],
   "highlights": [
