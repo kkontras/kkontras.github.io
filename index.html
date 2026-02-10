@@ -164,17 +164,10 @@
 <!--                        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search"-->
 <!--                                                                                      aria-hidden="true"></i></a>-->
 <!--                    </li>-->
-                    <li class="nav-item dropdown theme-dropdown">
-                        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true"
-                           aria-label="Display preferences">
-                            <i class="fas fa-moon" aria-hidden="true"></i>
-                        </a>
-                        <div class="dropdown-menu">
-<!--                            TODO: Change this to go from dark-default to light only, not auto-->
-                            <a href="#" class="dropdown-item js-set-theme-light">
-                                <span>Light</span>
-                            </a>
-                        </div>
+                    <li class="nav-item">
+                        <button id="main-theme-toggle" class="nav-link theme-icon-btn" type="button" aria-label="Toggle dark and light mode" title="Switch to light mode">
+                            <i id="main-theme-toggle-icon" class="fas fa-sun" aria-hidden="true"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -253,6 +246,11 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="youtube">
+                                    <i class="fab fa-youtube big-icon"></i>
+                                </a>
+                            </li>
 
                             <li>
                                 <a href="https://www.linkedin.com/in/konstantinos-kontras-771855152/" target="_blank" rel="noopener"
@@ -541,7 +539,7 @@
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
-                                <a href="phil_link">
+                                <a href="./articles/philosophical/phmind_intelligence.html?src=phmind_intelligence.md">
                                     The Metabolic Mind: Reclaiming the Conditions of Intelligence
                                 </a>
                             </div>
@@ -848,6 +846,32 @@
         </div>
     </div>
 </div>
+<script>
+(() => {
+  const storageKey = 'main-site-theme';
+  const toggleButton = document.getElementById('main-theme-toggle');
+  const icon = document.getElementById('main-theme-toggle-icon');
+  if (!toggleButton || !icon) return;
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem(storageKey);
+  const initialTheme = savedTheme || (document.body.classList.contains('dark') ? 'dark' : (prefersDark ? 'dark' : 'light'));
+
+  function setTheme(theme) {
+    document.body.classList.remove('dark', 'light');
+    document.body.classList.add(theme);
+    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    toggleButton.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    localStorage.setItem(storageKey, theme);
+  }
+
+  setTheme(initialTheme);
+  toggleButton.addEventListener('click', () => {
+    const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+    setTheme(next);
+  });
+})();
+</script>
 <script src="./js/wowchemy-publication.js" type="module"></script>
 <script src="./js/site-content.js"></script>
 </body>
