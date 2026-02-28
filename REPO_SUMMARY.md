@@ -45,3 +45,144 @@
 
 - [Applied] Updated Dec 2025 MIT news icon to an airplane-style symbol.
   - Changed leading icon to `fas fa-plane-departure`.
+
+- [Applied] Professional homepage design pass for early-career researcher positioning.
+  - Reworked top-right intro into a focused hero block with concise positioning, CTA buttons, and research signal chips.
+  - Improved News readability (larger text and cleaner line height).
+  - Reduced highlights visual heaviness by removing fullscreen behavior and adding a compact highlight card strip.
+  - Improved publication scannability by styling venue/journal text as metadata chips.
+  - Unified accent usage and corrected `Febr 2025` typo to `Feb 2025`.
+
+- [Applied] Second professional refinement pass focused on visual restraint and whitespace control.
+  - Removed the extra highlight mini-card strip to reduce clutter.
+  - Tightened section vertical spacing (`About`, `Highlights`, `Publications`, `Philosophy`, `Contact`) to reduce empty areas.
+  - Reduced highlights carousel height and hero paddings/margins for denser, cleaner composition.
+  - Simplified profile/publication card geometry (smaller radii, tighter paddings).
+  - Shortened and formalized hero headline copy.
+
+- [Applied] Removed the boxed hero intro block in About after visual feedback.
+  - Replaced it with a single compact summary line.
+  - Deleted unused hero-specific styles and preserved tighter spacing.
+
+- [Applied] Refined About intro to plain professional lead paragraphs.
+  - Kept an intro but removed headline/chip-style presentation.
+  - Replaced with two concise lead paragraphs and lightweight typography.
+
+- [Applied] Updated profile role line in About card.
+  - Changed `PostDoc Researcher KU Leuven` to `PostDoc at MIT & KU Leuven`.
+
+- [Applied] Added new Feb 2026 CVPR acceptance news item.
+  - Added “The More, the Merrier: Contrastive Fusion for Higher-Order Multimodal Alignment” with the same publications link (`https://arxiv.org/abs/2511.21331`).
+
+- [Applied] Cleaned CVPR news title phrasing.
+  - Removed the “The More, the Merrier:” prefix from the Feb 2026 CVPR news item label.
+
+- [Applied] Updated CVPR paper venue label in Publications list.
+  - Changed the entry badge from `ArXiv 2025` to `CVPR 2026` for the Contrastive Fusion paper.
+
+- [Applied] Refined About intro affiliation wording.
+  - Updated the intro to: `MIT Media Lab and KU Leuven (Biomed, ESAT), working with Paul Liang and Maarten De Vos`.
+
+- [Applied] Removed parentheses in About intro affiliation phrase.
+  - Reworded to inline `KU Leuven Biomed, ESAT` format.
+
+- [Applied] Refined About affiliation text and highlights visual balance.
+  - Updated affiliation wording to `KU Leuven Biomed-ESAT`.
+  - Increased highlights height to a medium layout (`440px` desktop, `340px` mobile) after small-height feedback.
+
+- [Applied] Citation integrity pass across all listed homepage publications.
+  - Added/fixed all BibTeX files referenced by `data-filename` in `index.html` so each Cite button resolves to an existing file.
+  - Updated citation metadata using current online sources (arXiv records, Springer IJCV page, IEEE/PubMed metadata, and KU Leuven repository link).
+
+- [Applied] Fixed dark-mode citation modal text contrast.
+  - Added explicit dark-mode styles for citation modal content, code block, buttons, and error text so BibTeX text remains readable.
+
+- [Applied] Switched MCR publication reference from arXiv to official NeurIPS page.
+  - Updated `index.html` publication link to NeurIPS virtual poster URL.
+  - Replaced `mcr.bib` entry with a NeurIPS conference-style citation and NeurIPS URL.
+
+- [Applied] Added dual citation entries for BMVC-IJCV publication.
+  - Updated `multiloss.bib` to include both BMVC 2024 conference citation and IJCV 2026 journal citation.
+
+- [Applied] Renamed BMVC-IJCV BibTeX keys for consistency.
+  - Changed keys to `kontras2024MLB` (BMVC) and `kontras2026MLB` (IJCV).
+
+- [Applied] Added auto-updating GitHub activity snippet below profile box.
+  - Inserted a `Recent GitHub Activity` card under the profile card in `index.html`.
+  - Added client-side GitHub API loader (`js/github-activity.js`) that lists repositories from recent push events.
+  - Added light/dark styling for the activity card in `css/custom.css`.
+
+- [Applied] Refined GitHub activity widget content rules.
+  - Excluded `kkontras/kkontras.github.io` from the recent repos list.
+  - Added an auto-updating `Website last updated: ...` line sourced from the latest commit date of this repository.
+
+- [Applied] Reduced visual weight of GitHub activity panel under profile.
+  - Removed card-like background/border radius and switched to a subtle top-divider style.
+  - Decreased heading/body/meta type sizes and opacity so profile identity remains the primary visual focus.
+
+- [Applied] Reframed GitHub panel from commit tracking to popular repositories.
+  - Replaced recent push/recency logic with a popularity view based on stars/forks/language from public repos.
+  - Updated widget heading/subtitle and loading/fallback copy to match the new purpose.
+
+- [Applied] Switched GitHub panel to a curated featured-repositories list.
+  - Updated heading to `Selected Public Repositories`.
+  - Configured fixed repo set to include `kkontras/SynIB`, `kkontras/MCR`, `kkontras/CoRe-Sleep`, and `kkontras/MLB`.
+  - Kept live metadata (stars/forks/language) fetched from GitHub API.
+
+- [Applied] Simplified GitHub panel heading structure.
+  - Removed the redundant subtitle under `Selected Public Repositories`.
+
+- [Applied] Adjusted spacing in GitHub repositories panel.
+  - Added extra space between the `Selected Public Repositories` title and the repository list.
+
+- [Applied] Tuned typography for About narrative and News readability.
+  - Increased `News` item text size/line-height for cleaner scanability.
+  - Increased About intro/body paragraph font sizes and line-height for better long-form readability.
+
+- [Applied] Reduced About and News text sizing after follow-up feedback.
+  - Scaled down News and About font sizes/line-heights for a tighter visual density.
+
+- [Applied] De-emphasized News list visual weight.
+  - Removed per-item box treatment (background/border/radius) in light and dark themes.
+  - Reduced icon size and softened icon color to make News feel less dominant.
+
+- [Applied] Added structural separation above News and removed remaining highlight feel.
+  - Inserted a horizontal divider above the `News` heading.
+  - Removed remaining background-emphasis traits from News items and softened link weight.
+
+- [Applied] Removed residual dark-mode News background source rules.
+  - Deleted grouped dark-theme selectors that were reintroducing `.news-item` background highlight.
+
+- [Applied] Converted News into a timeline-style list with year rails.
+  - Added a left vertical line per entry with extracted year labels from news dates.
+  - Updated news rendering (`js/site-content.js`) and styling (`css/custom.css`) to support the timeline layout.
+
+- [Applied] Grouped News timeline years to avoid repetition.
+  - Year is now shown only on the first entry of each year block; subsequent entries in the same year hide the repeated year label.
+
+- [Applied] Simplified News timeline text and markers.
+  - Removed displayed month/year prefixes (e.g., `Feb 2026:`) from news text while keeping year grouping rails.
+  - Switched to a neutral circular marker instead of per-item emoji-like icons.
+
+- [Applied] Removed News timeline bullet markers entirely.
+  - Kept only year rails and text entries (no dot/bullet symbols).
+
+- [Applied] Refined grouped-year timeline continuity and spacing.
+  - Kept vertical rail continuity for entries within the same year block.
+  - Reduced vertical spacing between entries that belong to the same year.
+
+- [Applied] Reworked News timeline rail to a single continuous line.
+  - Replaced per-item segmented rails with one list-level vertical line to avoid dashed/fragmented appearance.
+
+- [Applied] Prevented timeline rail from crossing year labels.
+  - Shifted the vertical line to the right of year labels and added year-label background shielding for light/dark themes.
+
+- [Applied] Adjusted News rail to pass through year column with stop/continue gaps at labels.
+  - Centered line back in the year column and kept masking only on visible year labels to create the intended interrupted effect.
+
+- [Applied] Tuned News vertical spacing by year grouping.
+  - Reduced spacing between entries within the same year.
+  - Increased separation at transitions between different years.
+
+- [Applied] Reworded Jan 2026 IJCV news entry and kept paper-only link.
+  - Updated text to `Accepted at IJCV` and linked only the paper title `Self-Balancing Multimodal Models via Multi-Loss Gradient Modulation`.

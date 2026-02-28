@@ -15,18 +15,40 @@
 
     const fragment = document.createDocumentFragment();
 
+    const stripDatePrefix = (value) => {
+      if (!value) return '';
+      return value.replace(/^\s*[A-Za-z]{3,9}\s+\d{4}:\s*/i, '').trimStart();
+    };
+
+    let lastYear = null;
+
     items.forEach((item) => {
       const entry = document.createElement('div');
       entry.className = 'news-item';
 
-      const icon = document.createElement('i');
-      icon.className = item.icon || 'far';
-      icon.setAttribute('aria-hidden', 'true');
+      const rail = document.createElement('div');
+      rail.className = 'news-rail';
+
+      const yearLabel = document.createElement('span');
+      yearLabel.className = 'news-year';
+      const yearMatch = (item.text || '').match(/\b(19|20)\d{2}\b/);
+      const currentYear = yearMatch ? yearMatch[0] : '';
+      if (currentYear && currentYear === lastYear) {
+        yearLabel.textContent = '';
+        yearLabel.classList.add('news-year-continued');
+        entry.classList.add('news-item-continued-year');
+        rail.classList.add('news-rail-continued-year');
+      } else {
+        yearLabel.textContent = currentYear;
+      }
+      lastYear = currentYear || lastYear;
+
+      rail.appendChild(yearLabel);
 
       const text = document.createElement('span');
       text.className = 'news-text';
 
-      appendText(text, item.text);
+      appendText(text, stripDatePrefix(item.text));
 
       if (item.link && item.link.url) {
         const needsSpace = text.childNodes.length > 0 && !text.textContent.endsWith(' ');
@@ -52,7 +74,7 @@
 
       appendText(text, item.suffix);
 
-      entry.appendChild(icon);
+      entry.appendChild(rail);
       entry.appendChild(text);
       fragment.appendChild(entry);
     });
@@ -81,7 +103,7 @@
       indicatorFragment.appendChild(indicator);
 
       const slide = document.createElement('div');
-      slide.className = 'carousel-item fullscreen';
+      slide.className = 'carousel-item';
       if (index === 0) {
         slide.classList.add('active');
       }
