@@ -1,6 +1,15 @@
 {
   "news": [
     {
+      "icon": "far fa-file-alt",
+      "text": "Feb 2026: Accepted at CVPR",
+      "link": {
+        "label": "Contrastive Fusion for Higher-Order Multimodal Alignment",
+        "url": "https://arxiv.org/abs/2511.21331",
+        "em": true
+      }
+    },
+    {
       "icon": "fas fa-award",
       "text": "Feb 2026:",
       "link": {
@@ -12,9 +21,9 @@
     },
     {
       "icon": "far fa-file-alt",
-      "text": "Jan 2026:",
+      "text": "Jan 2026: Accepted at IJCV",
       "link": {
-        "label": "An extension of the MLB from BMVC got accepted to IJCV",
+        "label": "Self-Balancing Multimodal Models via Multi-Loss Gradient Modulation",
         "url": "https://link.springer.com/article/10.1007/s11263-025-02696-w",
         "em": true
       }
@@ -44,7 +53,7 @@
     },
     {
       "icon": "fas fa-file-alt",
-      "text": "Febr 2025: Defended the",
+      "text": "Feb 2025: Defended the",
       "link": {
         "label": " PhD",
         "url": "https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0"
