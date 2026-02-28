@@ -23,6 +23,7 @@
 
 
     <link rel="stylesheet" href="./css/wowchemy.css"/>
+    <link rel="stylesheet" href="./css/custom.css"/>
 
 
     <link rel="stylesheet" href="./css/libs/chroma/github-light.min.css" title="hl-light" media="print"
@@ -80,7 +81,7 @@
 
 
 </head>
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   ">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper dark">
 <script src="./js/wowchemy-init.min.js"></script>
 <aside class="search-modal" id="search">
     <div class="container">
@@ -148,17 +149,11 @@
 <!--                        </li>-->
 
                         <li class="nav-item">
-                            <a class="nav-link " href="./philosophical-articles.html"><span>Philosophy Articles</span></a>
+                            <a class="nav-link " href="./#philosophy"><span>Philosophy</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="./philosophy-foundations.html"><span>Philosophy: Foundations</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="./philosophy-mind-ai.html"><span>Philosophy: Mind &amp; AI</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="./articles.html"><span>Articles</span></a>
-                        </li>
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link " href="./#general_articles"><span>General Articles</span></a>-->
+<!--                        </li>-->
                         <li class="nav-item">
                             <a class="nav-link " href="./#contact" data-target="#contact"><span>Contact</span></a>
                         </li>
@@ -169,23 +164,10 @@
 <!--                        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search"-->
 <!--                                                                                      aria-hidden="true"></i></a>-->
 <!--                    </li>-->
-                    <li class="nav-item dropdown theme-dropdown">
-                        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true"
-                           aria-label="Display preferences">
-                            <i class="fas fa-moon" aria-hidden="true"></i>
-                        </a>
-                        <div class="dropdown-menu">
-<!--                            TODO: Change this to go from dark-default to light only, not auto-->
-                            <a href="#" class="dropdown-item js-set-theme-light">
-                                <span>Light</span>
-                            </a>
-                            <a href="#" class="dropdown-item js-set-theme-dark">
-                                <span>Dark</span>
-                            </a>
-                            <a href="#" class="dropdown-item js-set-theme-auto">
-                                <span>Automatic</span>
-                            </a>
-                        </div>
+                    <li class="nav-item">
+                        <button id="main-theme-toggle" class="nav-link theme-icon-btn" type="button" aria-label="Toggle dark and light mode" title="Switch to light mode">
+                            <i id="main-theme-toggle-icon" class="fas fa-sun" aria-hidden="true"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -220,12 +202,12 @@
 
                             <h2>Konstantinos Kontras</h2>
 
-                            <h3>Multimodal Machine Learning</h3>
+                            <h3>Multimodal Deep Learning</h3>
 
 
                             <h3>
-                                <a href="https://www.esat.kuleuven.be/stadius/research.php?view=BioMed" target="_blank" rel="noopener">
-                                    <span>PhD Researcher KU Leuven</span>
+                                <a href="https://biomed-kuleuven.web.app/" target="_blank" rel="noopener">
+                                    <span>PostDoc Researcher KU Leuven</span>
                                 </a>
                             </h3>
 
@@ -242,12 +224,12 @@
                             </li>
 
 
-                            <li>
-                                <a href="https://twitter.com/k_kontras" target="_blank" rel="noopener"
-                                   aria-label="twitter">
-                                    <i class="fab fa-twitter big-icon"></i>
-                                </a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="https://twitter.com/k_kontras" target="_blank" rel="noopener"-->
+<!--                                   aria-label="twitter">-->
+<!--                                    <i class="fab fa-twitter big-icon"></i>-->
+<!--                                </a>-->
+<!--                            </li>-->
 
 
                             <li>
@@ -264,6 +246,11 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="https://www.youtube.com/@kkontras" target="_blank" rel="noopener" aria-label="youtube">
+                                    <i class="fab fa-youtube big-icon"></i>
+                                </a>
+                            </li>
 
                             <li>
                                 <a href="https://www.linkedin.com/in/konstantinos-kontras-771855152/" target="_blank" rel="noopener"
@@ -287,69 +274,30 @@
 
 
                     <div class="article-style">
-                        <p>Welcome, I am Konstantinos and a member of Biomed STADIUS at ESAT, KU Leuven in Belgium as a PhD
-                            researcher. There
-                            along with my supervisors
-                            <a href="https://www.esat.kuleuven.be/stadius/person.php?id=203" target="_blank"
-                               rel="noopener noreferrer">Prof.
-                                Maarten De Vos
-                            </a>,
-                            <a href="https://www.linkedin.com/in/christoschatzichristos/?originalSubdomain=be" target="_blank"
-                               rel="noopener noreferrer">Dr. Christos Chatzichristos
-                            </a> and
-                            <a href="https://www.esat.kuleuven.be/sista/members/suykens.html" target="_blank"
-                               rel="noopener noreferrer">Prof.
-                                Johan Suykens
-                            </a>, we are interested in
-                            <b>Multimodal Fusion
-                            </b> through learning processes.
+                        <br>
+                        <p>Hi, I'm Konstantinos <br>  <br> I am a PostDoc at the Multisensory Intelligence in MIT Media Lab and in ESAT at KU Leuven,
+                            working with <a href="https://pliang279.github.io/" target="_blank" rel="noopener noreferrer">Paul Liang</a>
+                            and <a href="https://scholar.google.com/citations?user=xTjDXdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Maarten De Vos</a>.
+                            My research studies multimodal learning and the training dynamics of models that combine heterogeneous sources of information.
                         </p>
-                        <p> In the PhD so far, we have explored multiple multimodal fusion methods in terms of performance and robustness, published the current sota on multimodal sleep staging and we are working the past couple of years on Multimodal Competition.
-                            This competition makes models overfit to one modality underoptimizing the others. Currently working on improving the multimodal training objective and with that obtain significant performance gains.
+                        <p>I received my PhD from KU Leuven, where I worked on
+                            <b>Multimodal Fusion</b> and <b>Multimodal Competition</b>, fundamental challenges in training multimodal systems, across modalities ranging
+                            from video, text, and audio to physiological signals such as EEG, supervised by
+                            <a href="https://scholar.google.com/citations?user=xTjDXdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Maarten De Vos</a>,
+                            <a href="https://www.linkedin.com/in/christoschatzichristos/?originalSubdomain=be" target="_blank" rel="noopener noreferrer">Christos Chatzichristos</a>,
+                            and <a href="https://scholar.google.com/citations?user=WtBmh0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Johan Suykens</a>.
                         </p>
-                        <p>Before joining Biomed, I was a part of PSI/Visics group as a master student at the same building working on
-                            uncertainty for autonomous vehicles.
-                            <b>Bayesian Model Average
-                            </b> approximations and the CityScapes dataset was combined to create a pixel-level
-                            <b>Active Learning
-                            </b> schema for semantic segmentation. I had the chance to be supervised with
-                            <a href="https://www.linkedin.com/in/marc-proesmans-a616065/?originalSubdomain=be" target="_blank"
-                               rel="noopener noreferrer">Ir. Mark Proesmas
-                            </a>,
-                            <a href="https://www.linkedin.com/in/jonas-heylen/?originalSubdomain=be" target="_blank"
-                               rel="noopener noreferrer">Ir. Jonas Heylen
-                            </a> and
-                            <a href="https://www.linkedin.com/in/luc-van-gool-1b4a689/?originalSubdomain=ch" target="_blank"
-                               rel="noopener noreferrer">Prof. Luc Van Gool
-                            </a>
+                        <p>Before the PhD, I worked with the PSI/Visics and TRACE groups on uncertainty estimation for autonomous driving, including
+                            <b>Bayesian model averaging</b> and <b>active learning</b> for semantic segmentation, supervised by
+                            <a href="https://scholar.google.com/citations?user=ji4kuF0AAAAJ&hl=nl" target="_blank" rel="noopener noreferrer">Mark Proesmans</a>
+                            and <a href="https://insait.ai/prof-luc-van-gool/" target="_blank" rel="noopener noreferrer">Luc Van Gool</a>.
                         </p>
                         <h3 id="news">News</h3>
                         <!-- &rarr; [Post-doc vacancy](https://vacatures.uva.nl/UvA/job/Postdoctoral-Researcher-on-Deep-Learning-and-Dynamical-Systems%2C-PDEs%2C-for-Science-%282-years%29/750169202/) on Deep Learning for Neural PDE solvers, Dynamical Systems, Science.      -->
-                        <p>
-                            <i class="far" aria-hidden="true">&#9999;</i> Nov 2024: Currently writing the PhD Thesis, its time! <br>
-
-                            <i class="fas fa-award"></i> Nov 2024: <a href="https://www.vscentrum.be/compute" target="_blank"
-                               rel="noopener"><em>VSC Tier-1 Compute Grant
-                            </em></a>- Awarded €40,000  <br>
-
-                            <i class="fas fa-video" aria-hidden="true"></i> Oct 2024: Seminar on "Multimodal Competition" soon on YouTube <br>
-
-                            <i class="far" aria-hidden="true">&#9999;</i> Jul 2024: Published the solution in BMVC24 <a href="https://arxiv.org/pdf/2405.07930" target="_blank"
-                                                                                                                        rel="noopener"><em>Improving Multimodal Learning with Multi-Loss Gradient Modulation
-                        </em></a>!  <br>
-
-                            <i class="far fa-times-circle"></i> Jan 2024: CVPR got rejected due to necessity for additional experiments, we kept that to publish it all together with a solution. <br>
-
-                            <i class="far" aria-hidden="true">&#9999;</i> Nov 2023: Recently submitted to CVPR 2024 doubting the benefits of multimodal learning from scratch. <br>
-
-                            <i class="fas fa-video" aria-hidden="true"></i>
-                            March 2023: Talk in the <a href="https://www.eppgroup.eu/what-we-do/with-eu-countries/greece/european-health-tech-summit" target="_blank"
-                                             rel="noopener"> Health Tech Summit </a> on the role of ML/AI on future health systems. <br>
-
-                            <i class="far" aria-hidden="true">&#9999;</i>
-                            March 2023: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520" target="_blank"
-                                                  rel="noopener"><em>CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities
-                            </em></a> published in IEEE TSNRE.<br>
+                        <div id="news-list" class="news-list"></div>
+                        <noscript>
+                            <p>News updates are available when JavaScript is enabled.</p>
+                        </noscript>
                     </div>
                     <div class="row">
                     </div>
@@ -365,85 +313,21 @@
         <div class="home-section-bg ">
         </div>
 
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators" id="highlights-indicators"></ol>
 
-            <li data-target="#highlights" data-slide-to="0" class="active"></li>
-
-            <li data-target="#highlights" data-slide-to="1"></li>
-
-            <li data-target="#highlights" data-slide-to="2"></li>
-
-<!--            <li data-target="#highlights" data-slide-to="3"></li>-->
-
-<!--            <li data-target="#highlights" data-slide-to="4"></li>-->
-
-        </ol>
-
-        <div class="carousel-inner">
-
-
-            <div class="carousel-item active fullscreen"
-                 style=" background-color: #666; width:100%; background-size:cover; background-image: url('./media/core-site.drawio.png'); background-repeat: no-repeat; background-position: center; ">
-                <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center"
-                     style="-webkit-backdrop-filter: brightness(0.4); backdrop-filter: brightness(0.4);">
-                    <div class="wg-hero dark container"
-                         style="margin-left: 6rem; margin-right: 6rem; text-align: center;">
-                        <h1 class="hero-title">
-                            CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities
-                        </h1>
-                        <p class="hero-lead" style="margin: 0 auto 0 auto;">
-                            K. Kontras, C. Chatzichristos, J. Suykens, M. De Vos <br> IEEE TSNRE 2024
-                        </p>
-                        <p>
-                            <a href="https://github.com/kkontras/CoRe-Sleep/tree/main" class="btn btn-light btn-lg mt-3"><i
-                                    class="fab fa-github" style="padding-right: 10px;"></i>GitHub</a>
-                        </p>
-
+        <div class="carousel-inner" id="highlights-items"></div>
+        <noscript>
+            <div class="carousel-inner">
+                <div class="carousel-item active fullscreen">
+                    <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center">
+                        <div class="wg-hero dark container highlight-hero">
+                            <h1 class="hero-title">Highlights</h1>
+                            <p class="hero-lead">Enable JavaScript to load featured projects.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item fullscreen"
-                 style=" background-color: #666; width:100%; background-size:cover; background-image: url('./media/MLB_site.svg'); background-repeat: no-repeat; background-position: center; ">
-                <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center"
-                     style="-webkit-backdrop-filter: brightness(0.4); backdrop-filter: brightness(0.4);">
-                    <div class="wg-hero dark container"
-                         style="margin-left: 6rem; margin-right: 6rem; text-align: center;">
-                        <h1 class="hero-title">
-                            Improving Multimodal Learning with Multi-Loss Gradient Modulation
-                        </h1>
-                        <p class="hero-lead" style="margin: 0 auto 0 auto;">
-                            K. Kontras, C. Chatzichristos, M. Blaschko, M. De Vos <br> BMVC 2024
-                        </p>
-                        <p>
-                            <a href="https://github.com/kkontras/MLB" class="btn btn-light btn-lg mt-3"><i
-                                    class="fab fa-github" style="padding-right: 10px;"></i>GitHub</a>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item fullscreen"
-                 style=" background-color: #666; width:100%; background-size:cover; background-image: url('./media/MCR_Cover.svg'); background-repeat: no-repeat; background-position: center; ">
-                <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center"
-                     style="-webkit-backdrop-filter: brightness(0.4); backdrop-filter: brightness(0.4);">
-                    <div class="wg-hero dark container"
-                         style="margin-left: 6rem; margin-right: 6rem; text-align: center;">
-                        <h1 class="hero-title">
-                            Multimodal Fusion Balancing Through Game-Theoretic Regularization
-                        </h1>
-                        <p class="hero-lead" style="margin: 0 auto 0 auto;">
-                            K. Kontras, T. Strypsteen, C. Chatzichristos, <br> P.P. Liang, M. Blaschko, M. De Vos <br> ArXiv
-                        </p>
-                        <p>
-                            <a href="https://github.com/kkontras/MCR" class="btn btn-light btn-lg mt-3"><i
-                                    class="fab fa-github" style="padding-right: 10px;"></i>GitHub</a>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        </noscript>
 
 
         <a class="carousel-control-prev" href="#highlights" data-slide="prev">
@@ -464,80 +348,263 @@
 
         </div>
         <div class="container">
-            <div class="row  ">
-                <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <div class="row mb-4">
+                <div class="col-12">
                     <h1 class="mb-0">Publications</h1>
                 </div>
-                <div class="col-12 col-lg-8">
-                    <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
-                        <span class="article-metadata li-cite-author">
-                            <span>Konstantinos Kontras</span>,
-                            <span>Christos Chatzichristos</span>,
-                            <span>Johan Suykens</span>,
-                            <span>Maarten De Vos</span>
-                        </span>
-                        (2023).
-                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520">CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities
-                            </a>.
-                        <em>IEEE TSNRE 2024</em>.
-                        <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/publication/kkontras-2023-arxiv-core/coresleep_cite.bib">
-                        Cite</a>
+            </div>
+
+            <div class="row">
+                <!-- Offset on large screens for a subtle indent -->
+                <div class="col-12 col-lg-10 offset-lg-1">
+
+                    <div class="pub-list-item view-citation mb-3">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-title">
+                                <a href="https://arxiv.org/abs/2411.07335">
+                                    Balancing multimodal training through game-theoretic regularization
+                                </a>
+                            </div>
+                            <div class="pub-details">
+                                <div class="pub-meta">
+                                    <span class="article-metadata li-cite-author">
+                                        <span>Konstantinos Kontras</span>,
+                                        <span>Thomas Strypsteen</span>,
+                                        <span>Christos Chatzichristos</span>,
+                                        <span>Paul Pu Liang</span>,
+                                        <span>Matthew B. Blaschko</span>,
+                                        <span>Maarten De Vos</span>
+                                    </span>
+                                </div>
+                                <div class="pub-footer">
+                                    <em>Spotlight at Neurips 2025</em>
+                                    <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                                       data-filename="/publication/kkontras-2024-arxiv-mcr/mcr.bib">
+                                        Cite
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-                        <a href="404.html"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
-                        <span class="article-metadata li-cite-author">
-                            <span>Konstantinos Kontras</span>,
-                            <span>Christos Chatzichristos</span>,
-                            <span>Matthew Blaschko</span>,
-                            <span>Maarten De Vos</span>
-                        </span>
-                        (2023).
-                        <a href="404.html">Is there benefit in training multimodal models from scratch?</a>
-                        <em>ArXiv </em>.
-                            <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-                               data-filename="/publication/Benefits/cite.bib">
-                                Cite</a>
+                    <div class="pub-list-item view-citation mb-3">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-title">
+                                <a href="https://arxiv.org/abs/2511.21331">
+                                    The More, the Merrier: Contrastive Fusion for Higher-Order Multimodal Alignment
+                                </a>.
+                            </div>
+                            <div class="pub-details">
+                                <div class="pub-meta">
+                                    <span class="article-metadata li-cite-author">
+                                        <span>Stefanos Koutoupis</span>,
+                                        <span>Michaela Areti Zervou</span>,
+                                        <span>Konstantinos Kontras</span>,
+                                        <span>Maarten De Vos</span>,
+                                        <span>Panagiotis Tsakalides</span>,
+                                        <span>Grigorios Tsagkatakis</span>
+                                    </span>
+                                </div>
+                                <div class="pub-footer">
+                                    <em>ArXiv 2025</em>
+                                    <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                                       data-filename="/publication/koutoupis-2025-arxiv-contrastive-fusion/contrastive_fusion.bib">
+                                        Cite
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-                        <a href="https://arxiv.org/pdf/2405.07930"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
-                        <span class="article-metadata li-cite-author">
-                            <span>Konstantinos Kontras</span>,
-                            <span>Christos Chatzichristos</span>,
-                            <span>Matthew Blaschko</span>,
-                            <span>Maarten De Vos</span>
-                        </span>
-                        (2024).
-                        <a href="https://arxiv.org/pdf/2405.07930">Improving Multimodal Learning with Multi-Loss Gradient Modulation</a>
-                        <em>BMVC24 </em>.
-                        <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-                           data-filename="/publication/MLB/cite.bib">
-                            Cite</a>
+                    <div class="pub-list-item view-citation mb-3">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-title">
+                                <a href="https://lirias.kuleuven.be/handle/123456789/4208364">
+                                    Multimodal Fusion
+                                </a>
+                            </div>
+                            <div class="pub-details">
+                                <div class="pub-meta">
+                                    <span class="article-metadata li-cite-author">
+                                        <span>Konstantinos Kontras</span>
+                                    </span>
+                                </div>
+                                <div class="pub-footer">
+                                    <em>PhD Dissertation 2025, KU Leuven</em>
+                                    <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                                       data-filename="/publication/kkontras-2025-thesis/thesis.bib">
+                                        Cite
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-                        <a href="404.html"><i class="far fa-file-alt pub-icon" aria-hidden="true"></i></a>
-                        <span class="article-metadata li-cite-author">
-                            <span>Konstantinos Kontras</span>,
-                            <span>Thomas Strypsteen</span>,
-                            <span>Christos Chatzichristos</span>,
-                            <span>Paul Liang</span>,
-                            <span>Matthew Blaschko</span>,
-                            <span>Maarten De Vos</span>
-                        </span>
-                        (2024).
-                        <a href="404.html">Multimodal Competition Regularizer</a>
-                        <em>ArXiv</em>.
-                        <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-                           data-filename="/publication/MCR/cite.bib">
-                            Cite</a>
+
+
+
+                    <div class="pub-list-item view-citation mb-3">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-title">
+                                <a href="https://arxiv.org/abs/2405.07930">
+                                    Improving Multimodal Learning with Multi-Loss Gradient Modulation
+                                </a>
+                            </div>
+                            <div class="pub-details">
+                                <div class="pub-meta">
+                                    <span class="article-metadata li-cite-author">
+                                        <span>Konstantinos Kontras</span>,
+                                        <span>Christos Chatzichristos</span>,
+                                        <span>Matthew B. Blaschko</span>,
+                                        <span>Maarten De Vos</span>
+                                    </span>
+                                </div>
+                                <div class="pub-footer">
+                                    <em>BMVC 2024 & IJCV 2026 </em>
+                                    <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                                       data-filename="/publication/kkontras-2024-bmvc-multiloss/multiloss.bib">
+                                        Cite
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="pub-list-item view-citation mb-3">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-title">
+                                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10400520">
+                                    CoRe-Sleep: A Multimodal Fusion Framework for Time Series Robust to Imperfect Modalities
+                                </a>
+                            </div>
+                            <div class="pub-details">
+                                <div class="pub-meta">
+                                    <span class="article-metadata li-cite-author">
+                                        <span>Konstantinos Kontras</span>,
+                                        <span>Christos Chatzichristos</span>,
+                                        <span>Johan A. K. Suykens</span>,
+                                        <span>Maarten De Vos</span>
+                                    </span>
+                                </div>
+                                <div class="pub-footer">
+                                    <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>
+                                    <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                                       data-filename="/publication/kkontras-2023-tnsre-coresleep/coresleep.bib">
+                                        Cite
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
+
+
             </div>
         </div>
     </section>
 
+    <section id="philosophy" class="home-section wg-pages  ">
+        <div class="home-section-bg ">
+
+        </div>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h1 class="mb-0">Philosophical Essays</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Offset on large screens for a subtle indent -->
+                <div class="col-12 col-lg-10 offset-lg-1">
+
+                    <div class="pub-list-item view-citation mb-3">
+                        <div class="pub-figure">
+                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                        </div>
+                        <div class="pub-content">
+                            <div class="pub-title">
+                                <a href="./articles/philosophical/phmind_intelligence.html?src=phmind_intelligence.md">
+                                    The Metabolic Mind: Reclaiming the Conditions of Intelligence
+                                </a>
+                            </div>
+                            <div class="pub-details">
+                                <div class="pub-meta">
+                                    <span class="article-metadata li-cite-author">
+                                        <span>Konstantinos Kontras</span>, reviewed by <span>Agné Valatkaité</span> & <span>Pieter Adriaens</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+<!--    <section id="general_articles" class="home-section wg-pages  ">-->
+<!--        <div class="home-section-bg ">-->
+
+<!--        </div>-->
+<!--        <div class="container">-->
+<!--            <div class="row mb-4">-->
+<!--                <div class="col-12">-->
+<!--                    <h1 class="mb-0">Public Reach</h1>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="row">-->
+<!--                &lt;!&ndash; Offset on large screens for a subtle indent &ndash;&gt;-->
+<!--                <div class="col-12 col-lg-10 offset-lg-1">-->
+
+<!--                    <div class="pub-list-item view-citation mb-3">-->
+<!--                        <div class="pub-figure">-->
+<!--                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">-->
+<!--                        </div>-->
+<!--                        <div class="pub-content">-->
+<!--                            <div class="pub-title">-->
+<!--                                <a href="https://arxiv.org/abs/2411.07335">-->
+<!--                                    Balancing multimodal training through game-theoretic regularization-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                            <div class="pub-details">-->
+<!--                                <div class="pub-meta">-->
+<!--                                    <span class="article-metadata li-cite-author">-->
+<!--                                        <span>Konstantinos Kontras</span>,-->
+<!--                                        <span>Thomas Strypsteen</span>,-->
+<!--                                        <span>Christos Chatzichristos</span>,-->
+<!--                                        <span>Paul Pu Liang</span>,-->
+<!--                                        <span>Matthew B. Blaschko</span>,-->
+<!--                                        <span>Maarten De Vos</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <section id="contact" class="home-section wg-contact  ">
         <div class="home-section-bg ">
@@ -552,14 +619,6 @@
                         <li>
                             <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
                             <span id="person-email"><a href="mailto:konstantinos dot kontras@kuleuven.be">konstantinos dot kontras @kuleuven.be</a></span>
-                        </li>
-                        <li>
-                            <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
-                            <span id="person-address">Kasteelpark Arenberg 10, Leuven 3001, Room B00.47</span>
-                        </li>
-                        <li>
-                            <i class="fa-li fab fa-twitter fa-2x" aria-hidden="true"></i>
-                            <a href="https://twitter.com/k_kontras" target="_blank" rel="noopener">DM Me</a>
                         </li>
                     </ul>
                 </div>
@@ -636,6 +695,33 @@
         </div>
     </div>
 </div>
+<script>
+(() => {
+  const storageKey = 'main-site-theme';
+  const toggleButton = document.getElementById('main-theme-toggle');
+  const icon = document.getElementById('main-theme-toggle-icon');
+  if (!toggleButton || !icon) return;
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem(storageKey);
+  const initialTheme = savedTheme || (document.body.classList.contains('dark') ? 'dark' : (prefersDark ? 'dark' : 'light'));
+
+  function setTheme(theme) {
+    document.body.classList.remove('dark', 'light');
+    document.body.classList.add(theme);
+    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    toggleButton.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    localStorage.setItem(storageKey, theme);
+  }
+
+  setTheme(initialTheme);
+  toggleButton.addEventListener('click', () => {
+    const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+    setTheme(next);
+  });
+})();
+</script>
 <script src="./js/wowchemy-publication.js" type="module"></script>
+<script src="./js/site-content.js"></script>
 </body>
 </html>
