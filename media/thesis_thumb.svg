@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="270" viewBox="0 0 480 270" role="img" aria-labelledby="title desc">
+  <title id="title">Multimodal Fusion Thesis Thumbnail</title>
+  <desc id="desc">Stylized thesis thumbnail for Multimodal Fusion PhD dissertation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f4ef"/>
+      <stop offset="100%" stop-color="#ebe3d8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b1e3f"/>
+      <stop offset="100%" stop-color="#b5465e"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="270" fill="url(#bg)"/>
+  <rect x="38" y="36" width="404" height="198" rx="14" fill="#fffaf1" stroke="#d8cbbb" stroke-width="2"/>
+  <rect x="38" y="36" width="404" height="42" rx="14" fill="url(#accent)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#222831">
+    <text x="56" y="62" font-size="16" font-weight="700" fill="#fff7ee">KU Leuven Dissertation</text>
+    <text x="56" y="114" font-size="27" font-weight="700">Multimodal Fusion</text>
+    <text x="56" y="147" font-size="16">PhD Dissertation 2025</text>
+    <text x="56" y="173" font-size="16">Konstantinos Kontras</text>
+  </g>
+  <g fill="#c7b299" opacity="0.45">
+    <circle cx="401" cy="177" r="21"/>
+    <circle cx="430" cy="205" r="12"/>
+  </g>
+</svg>

@@ -235,3 +235,86 @@
 
 - [Applied] Updated NeurIPS spotlight news linked title.
   - Replaced `Balancing multimodal training through game-theoretic regularization` with `Multimodal Competition Regularizer`.
+
+- [Applied] Added dedicated publication thumbnails for all homepage paper entries.
+  - Replaced placeholder figures in `index.html` with per-paper visuals (`MCR_Cover.svg`, `contrastive_fusion_thumb.png`, `thesis_thumb.svg`, `MLB_site.svg`, `core-site.drawio.png`).
+  - Added a first-page PDF snapshot thumbnail for Contrastive Fusion (`media/contrastive_fusion_thumb.png`) and a custom thesis thumbnail (`media/thesis_thumb.svg`).
+
+- [Applied] Replaced stylized publication thumbnails with figure-centric paper previews.
+  - Generated figure-based thumbnails from publication PDFs (MCR, Contrastive Fusion, MLB, CoRe-Sleep) and updated `index.html` to use `media/mcr_thumb.png`, `media/contrastive_thumb.png`, `media/mlb_thumb.png`, and `media/coresleep_thumb.png`.
+  - Kept thesis entry on `media/thesis_thumb.svg` as fallback because a direct thesis PDF download endpoint could not be reliably resolved from this environment.
+
+- [Applied] Removed interim non-final contrastive thumbnail assets.
+  - Deleted `media/contrastive_fusion_thumb.png` and `media/contrastive_fusion_thumb.svg` after replacing them with `media/contrastive_thumb.png`.
+
+- [Applied] Updated NeurIPS MCR thumbnail source to `media/mcr_methods_fig.pdf`.
+  - Re-rendered `media/mcr_thumb.png` from `mcr_methods_fig.pdf` and cropped it to focus on the methods figure for the Publications card.
+
+- [Applied] Updated BMVC-IJCV thumbnail source to `media/Methods_MLB.png`.
+  - Rebuilt `media/mlb_thumb.png` from the methods figure asset with a wide crop so the publication card shows the paper figure directly.
+
+- [Applied] Improved homepage mobile flow and panel color consistency.
+  - Moved `Selected Public Repositories` below News on phone screens by rendering a mobile-only activity block in the main content column (`d-lg-none`) while keeping a desktop-only block under the profile (`d-none d-lg-block`).
+  - Updated `js/github-activity.js` to populate multiple repository widgets via shared class hooks instead of single IDs.
+  - Unified navbar/header and profile card backgrounds per theme (`--kk-panel-light`, `--kk-panel-dark`) so both elements share the same surface color in light and dark modes.
+
+- [Applied] Recentered NeurIPS MCR publication thumbnail after visual QA.
+  - Re-cropped `media/mcr_thumb.png` from `mcr_methods_fig.pdf` with balanced framing to avoid left clipping and preserve the full method diagram.
+
+- [Applied] Enforced identical header/profile panel colors across themes.
+  - Added explicit light/dark overrides for `.page-header`, `.header--fixed`, `#navbar-main`, and `#profile` so the navbar header and profile block always use the same background color in both modes.
+
+- [Applied] Updated MCR publication thumbnail to include both key figures.
+  - Added rendered assets from `mcr_methods_fig.pdf` and `game_fig-1.pdf` (`media/mcr_methods_fig.png`, `media/mcr_game_fig.png`).
+  - Replaced the single MCR thumbnail image with a stacked two-figure layout (methods on top, game figure below) to reduce empty whitespace.
+
+- [Applied] Finalized MCR thumbnail as one centered composite image.
+  - Combined methods and game figures into a single `media/mcr_thumb.png` with auto-cropped figure bounds and centered top/bottom placement to avoid excessive whitespace.
+  - Restored Publications card markup back to a single image element for MCR (removed temporary stacked-figure HTML/CSS).
+
+- [Applied] Upgraded MCR composite thumbnail to vector format.
+  - Generated `media/mcr_thumb.pdf` by composing `game_fig-1.pdf` (top) and `mcr_methods_fig.pdf` (bottom) into one vector PDF thumbnail.
+  - Updated the MCR publication figure to load the vector PDF via `<object>` with PNG fallback for compatibility.
+
+- [Applied] Corrected MCR publication figure rendering to a proper single image card.
+  - Replaced the `<object>` PDF embed with a normal `<img src=\"./media/mcr_thumb.png\">` thumbnail so it renders cleanly in the list.
+  - Kept the combined PDF (`media/mcr_thumb.pdf`) as the linked source when opening the figure.
+
+- [Applied] Final MCR thumbnail quality and behavior refinement.
+  - Removed click-through behavior from the MCR thumbnail in Publications (image is now non-clickable).
+  - Re-rendered `media/mcr_thumb.png` from vector `media/mcr_thumb.pdf` at high resolution (`2400x1760`) for significantly better zoom quality.
+
+- [Applied] Rebuilt MCR composite with centered area-of-interest crops before stitching.
+  - Cropped both source PDF figures around their content regions with balanced margins, then stitched them into one new page (`media/mcr_thumb.pdf`) with top/bottom layout.
+  - Re-exported `media/mcr_thumb.png` from the rebuilt composition at `2400x1760` (matching card aspect ratio) for high-fidelity display.
+
+- [Applied] Updated CVPR publication figure to Confu asset.
+  - Switched the Contrastive Fusion card thumbnail from `media/contrastive_thumb.png` to `media/confu.png`.
+
+- [Applied] Refined thesis publication thumbnail using `Cover_Intro`.
+  - Generated `media/thesis_cover_intro.png` from `media/Cover_Intro-1.pdf` and wired thesis card to `media/thesis_thumb.png`.
+  - Added thesis-specific thumbnail styling (`object-fit: contain` with soft background) to keep the cover fully visible and visually clean in the publication card.
+
+- [Applied] Fixed CVPR Confu thumbnail cropping in publication card.
+  - Added a dedicated `confu-figure` class and switched to `object-fit: contain` with centered placement so the full figure is visible without left/right clipping.
+
+- [Applied] Removed custom Confu thumbnail background override.
+  - Dropped the extra background/padding on `.confu-figure` so the image uses its own native background while preserving full-fit scaling.
+
+- [Applied] Tuned Confu thumbnail band color to match figure background.
+  - Set `.confu-figure` background to `#f6f6f6` so top/bottom letterbox space blends with the image instead of showing a contrasting panel tone.
+
+- [Applied] Set Confu thumbnail letterbox background to white.
+  - Updated `.confu-figure` background to `#ffffff` per latest visual preference.
+
+- [Applied] Lightened publication figure containers in dark mode.
+  - Updated dark-mode `.pub-figure img` panel background and border to a light style so the rounded container is no longer dark/heavy.
+
+- [Applied] Switched thesis publication image to thesis cover asset.
+  - Updated thesis card thumbnail source from `media/thesis_thumb.png` to `media/thesis_cover.png`.
+
+- [Applied] Removed inner whitespace from thesis thumbnail container.
+  - Updated `.thesis-figure` to `object-fit: cover` with zero padding/background so the image fully fills the rounded square without visible white gaps.
+
+- [Applied] Updated philosophy publication figure asset.
+  - Replaced the philosophy card thumbnail placeholder with `media/metabolic_mind.png` for `The Metabolic Mind` entry.

@@ -8,12 +8,14 @@
     'kkontras/CoRe-Sleep',
     'kkontras/MLB'
   ];
-  const activityList = document.getElementById('github-activity-list');
-  const updatedEl = document.getElementById('website-last-updated');
-  if (!activityList) return;
+  const activityLists = Array.from(document.querySelectorAll('.js-github-activity-list'));
+  const updatedEls = Array.from(document.querySelectorAll('.js-website-last-updated'));
+  if (!activityLists.length) return;
 
   const renderEmpty = (message) => {
-    activityList.innerHTML = `<li class="activity-empty">${message}</li>`;
+    activityLists.forEach((listEl) => {
+      listEl.innerHTML = `<li class="activity-empty">${message}</li>`;
+    });
   };
 
   const renderItems = (items) => {
@@ -36,7 +38,9 @@
       `;
     });
 
-    activityList.innerHTML = rows.join('');
+    activityLists.forEach((listEl) => {
+      listEl.innerHTML = rows.join('');
+    });
   };
 
   const buildFeaturedRepos = (repos) => {
@@ -80,7 +84,7 @@
   };
 
   const loadWebsiteLastUpdated = async () => {
-    if (!updatedEl) return;
+    if (!updatedEls.length) return;
     try {
       const response = await fetch(`https://api.github.com/repos/${websiteRepo}/commits?per_page=1`, {
         headers: { Accept: 'application/vnd.github+json' }
@@ -92,9 +96,13 @@
       if (!isoDate) throw new Error('Missing commit date');
       const date = new Date(isoDate);
       const pretty = date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
-      updatedEl.textContent = `Website last updated: ${pretty}`;
+      updatedEls.forEach((updatedEl) => {
+        updatedEl.textContent = `Website last updated: ${pretty}`;
+      });
     } catch (_error) {
-      updatedEl.textContent = 'Website last updated: unavailable';
+      updatedEls.forEach((updatedEl) => {
+        updatedEl.textContent = 'Website last updated: unavailable';
+      });
     }
   };
 

@@ -269,12 +269,12 @@
                         </ul>
 
                     </div>
-                    <div id="github-activity" class="activity-card" aria-live="polite">
+                    <div class="activity-card d-none d-lg-block" aria-live="polite">
                         <h4>Selected Public Repositories</h4>
-                        <ul id="github-activity-list" class="activity-list">
+                        <ul class="activity-list js-github-activity-list">
                             <li class="activity-loading">Loading repositories...</li>
                         </ul>
-                        <p id="website-last-updated" class="activity-updated">Website last updated: loading...</p>
+                        <p class="activity-updated js-website-last-updated">Website last updated: loading...</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-8">
@@ -302,6 +302,13 @@
                         <noscript>
                             <p>News updates are available when JavaScript is enabled.</p>
                         </noscript>
+                        <div class="activity-card d-lg-none" aria-live="polite">
+                            <h4>Selected Public Repositories</h4>
+                            <ul class="activity-list js-github-activity-list">
+                                <li class="activity-loading">Loading repositories...</li>
+                            </ul>
+                            <p class="activity-updated js-website-last-updated">Website last updated: loading...</p>
+                        </div>
                     </div>
                     <div class="row">
                     </div>
@@ -363,7 +370,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/mcr_thumb.png" alt="Multimodal Competition Regularizer figure preview">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -383,7 +390,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>Spotlight at Neurips 2025</em>
+                                    <a class="pub-tag" href="https://neurips.cc/virtual/2025/loc/san-diego/poster/117227" target="_blank" rel="noopener">Spotlight at Neurips 2025</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2024-arxiv-mcr/mcr.bib">
                                         Cite
@@ -395,7 +402,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img class="confu-figure" src="./media/confu.png" alt="Confu figure preview for Contrastive Fusion paper">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -415,7 +422,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>CVPR 2026</em>
+                                    <a class="pub-tag" href="https://arxiv.org/abs/2511.21331" target="_blank" rel="noopener">CVPR 2026</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/koutoupis-2025-arxiv-contrastive-fusion/contrastive_fusion.bib">
                                         Cite
@@ -426,7 +433,7 @@
                     </div>
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img class="thesis-figure" src="./media/thesis_cover.png" alt="Multimodal Fusion thesis cover figure">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -441,7 +448,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>PhD Dissertation 2025, KU Leuven</em>
+                                    <a class="pub-tag" href="https://lirias.kuleuven.be/handle/123456789/4208364" target="_blank" rel="noopener">PhD Dissertation 2025, KU Leuven</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2025-thesis/thesis.bib">
                                         Cite
@@ -455,7 +462,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/mlb_thumb.png" alt="Multi-Loss Gradient Modulation figure preview">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -473,7 +480,8 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>BMVC 2024 & IJCV 2026 </em>
+                                    <a class="pub-tag" href="https://arxiv.org/abs/2405.07930" target="_blank" rel="noopener">BMVC 2024</a>
+                                    <a class="pub-tag" href="https://link.springer.com/article/10.1007/s11263-025-02696-w" target="_blank" rel="noopener">IJCV 2026</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2024-bmvc-multiloss/multiloss.bib">
                                         Cite
@@ -485,7 +493,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/coresleep_thumb.png" alt="CoRe-Sleep figure preview">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -503,7 +511,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>
+                                    <a class="pub-tag" href="https://ieeexplore.ieee.org/document/10400520" target="_blank" rel="noopener">IEEE Transactions on Neural Systems and Rehabilitation Engineering</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2023-tnsre-coresleep/coresleep.bib">
                                         Cite
@@ -539,7 +547,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/metabolic_mind.png" alt="Metabolic Mind philosophy essay figure">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
