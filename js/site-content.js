@@ -20,6 +20,24 @@
       return value.replace(/^\s*[A-Za-z]{3,9}\s+\d{4}:\s*/i, '').trimStart();
     };
 
+    const appendNewsLink = (container, linkItem) => {
+      if (!linkItem || !linkItem.url) return;
+      const link = document.createElement('a');
+      link.href = linkItem.url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      if (linkItem.em) {
+        const emphasis = document.createElement('em');
+        emphasis.textContent = linkItem.label;
+        link.appendChild(emphasis);
+      } else {
+        link.textContent = linkItem.label;
+      }
+
+      container.appendChild(link);
+    };
+
     let lastYear = null;
 
     items.forEach((item) => {
@@ -50,26 +68,25 @@
 
       appendText(text, stripDatePrefix(item.text));
 
-      if (item.link && item.link.url) {
+      if (Array.isArray(item.links) && item.links.length > 0) {
         const needsSpace = text.childNodes.length > 0 && !text.textContent.endsWith(' ');
         if (needsSpace) {
           text.append(document.createTextNode(' '));
         }
 
-        const link = document.createElement('a');
-        link.href = item.link.url;
-        link.target = '_blank';
-        link.rel = 'noopener';
-
-        if (item.link.em) {
-          const emphasis = document.createElement('em');
-          emphasis.textContent = item.link.label;
-          link.appendChild(emphasis);
-        } else {
-          link.textContent = item.link.label;
+        item.links.forEach((linkItem, index) => {
+          if (index > 0) {
+            const separator = index === item.links.length - 1 ? ' and ' : ', ';
+            text.append(document.createTextNode(separator));
+          }
+          appendNewsLink(text, linkItem);
+        });
+      } else if (item.link && item.link.url) {
+        const needsSpace = text.childNodes.length > 0 && !text.textContent.endsWith(' ');
+        if (needsSpace) {
+          text.append(document.createTextNode(' '));
         }
-
-        text.appendChild(link);
+        appendNewsLink(text, item.link);
       }
 
       appendText(text, item.suffix);

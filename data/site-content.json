@@ -2,39 +2,41 @@
   "news": [
     {
       "icon": "far fa-file-alt",
-      "text": "Feb 2026: Accepted at CVPR",
+      "text": "Feb 2026: Accepted at CVPR for",
       "link": {
         "label": "Contrastive Fusion for Higher-Order Multimodal Alignment",
         "url": "https://arxiv.org/abs/2511.21331",
         "em": true
-      }
+      },
+      "suffix": "."
     },
     {
       "icon": "fas fa-award",
-      "text": "Feb 2026:",
+      "text": "Feb 2026: Received the",
       "link": {
-        "label": "VSC Tier-1 Compute Grant",
+        "label": "VSC Tier-1",
         "url": "https://www.vscentrum.be/compute",
         "em": true
       },
-      "suffix": " €52k."
+      "suffix": " Compute Grant €52k."
     },
     {
       "icon": "far fa-file-alt",
-      "text": "Jan 2026: Accepted at IJCV",
+      "text": "Jan 2026: Accepted at IJCV for",
       "link": {
         "label": "Self-Balancing Multimodal Models via Multi-Loss Gradient Modulation",
         "url": "https://link.springer.com/article/10.1007/s11263-025-02696-w",
         "em": true
-      }
+      },
+      "suffix": "."
     },
     {
       "icon": "fas fa-plane-departure",
-      "text": "Dec 2025: Joined Multisensory Intelligence lab at MIT with Paul Liang"
+      "text": "Dec 2025: Joined Multisensory Intelligence lab at MIT with Paul Liang."
     },
     {
       "icon": "fas fa-award",
-      "text": "April 2025:",
+      "text": "Apr 2025: Received the MISTI:",
       "link": {
         "label": "MIT-KU Leuven Seed Fund",
         "url": "https://cis.mit.edu/opportunities/faculty/global-seed-funds/gsf-application",
@@ -44,44 +46,53 @@
     },
     {
       "icon": "far fa-file-alt",
-      "text": "Dec 2025: Neurips Spotlight ",
+      "text": "Dec 2025: Accepted at NeurIPS as Spotlight for",
       "link": {
-        "label": "Balancing multimodal training through game-theoretic regularization",
+        "label": "Multimodal Competition Regularizer",
         "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/117227",
         "em": true
-      }
+      },
+      "suffix": "."
     },
     {
       "icon": "fas fa-file-alt",
       "text": "Feb 2025: Defended the",
       "link": {
-        "label": " PhD",
+        "label": "PhD",
         "url": "https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=lirias4208364&context=SearchWebhook&vid=32KUL_KUL:Lirias&search_scope=lirias_profile&adaptor=SearchWebhook&tab=LIRIAS&query=any,contains,LIRIAS4208364&offset=0"
       },
       "suffix": ", officially a doctor!"
     },
     {
       "icon": "fas fa-award",
-      "text": "Nov 2024:",
+      "text": "Nov 2024: Received the",
       "link": {
-        "label": "VSC Tier-1 Compute Grant",
+        "label": "VSC Tier-1",
         "url": "https://www.vscentrum.be/compute",
         "em": true
       },
-      "suffix": " €40k."
+      "suffix": " Compute Grant €40k."
     },
     {
       "icon": "fas fa-video",
-      "text": "Oct 2024: ",
-      "link": {
-        "label": "Seminar on Multimodal Competition",
-        "url": "https://www.youtube.com/watch?v=pFL7BMmyZ1o&t=24s",
-        "em": true
-      }
+      "text": "Oct 2024: Presented seminars on Multimodal Competition at",
+      "links": [
+        {
+          "label": "KU Leuven",
+          "url": "https://www.youtube.com/watch?v=pFL7BMmyZ1o&t=24s",
+          "em": true
+        },
+        {
+          "label": "FORTH",
+          "url": "https://www.youtube.com/watch?v=5H4Hf5yx9Co",
+          "em": true
+        }
+      ],
+      "suffix": "."
     },
     {
       "icon": "fas fa-video",
-      "text": "March 2023: Talk in the EU Parliament",
+      "text": "Mar 2023: Delivered a talk in the EU Parliament at the",
       "link": {
         "label": "Health Tech Summit",
         "url": "https://www.eppgroup.eu/what-we-do/with-eu-countries/greece/european-health-tech-summit"

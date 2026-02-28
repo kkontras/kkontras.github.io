@@ -186,3 +186,52 @@
 
 - [Applied] Reworded Jan 2026 IJCV news entry and kept paper-only link.
   - Updated text to `Accepted at IJCV` and linked only the paper title `Self-Balancing Multimodal Models via Multi-Loss Gradient Modulation`.
+
+- [Applied] Condensed About narrative copy while preserving advisor/supervisor names.
+  - Shortened PhD and pre-PhD paragraphs for faster scanning and kept all named supervisors in place.
+
+- [Applied] Normalized emphasis in About PhD sentence.
+  - Changed `Multimodal Fusion` and `Multimodal Competition` to lowercase, non-bold text.
+
+- [Applied] Merged About intro lines and updated research-focus phrasing.
+  - Combined the first two intro sentences into one paragraph.
+  - Updated focus text to `multimodal learning, training dynamics, and reliable models and information theory`.
+
+- [Applied] Reworded News entries to use explicit action verbs.
+  - Updated event phrasing to consistent verb-led forms (`Accepted`, `Received`, `Presented`, `Delivered`, `Defended`).
+  - Updated seminar wording to `seminar on Multimodal Competition at KU Leuven and FORTH`.
+
+- [Applied] Updated NeurIPS spotlight phrasing in News.
+  - Changed to `Accepted at NeurIPS as Spotlight for` followed by the linked paper title.
+
+- [Applied] Updated Multimodal Competition seminar link to FORTH video source.
+  - Replaced KU Leuven YouTube URL with `https://www.youtube.com/watch?v=5H4Hf5yx9Co`.
+
+- [Applied] Refined publication card spacing between authors and tags.
+  - Adjusted `pub-details` gap and added subtle `pub-meta`/`pub-footer` margin tuning for cleaner separation.
+
+- [Applied] Tightened publication author-tag spacing after review.
+  - Reduced the separation margins to bring author names and tags slightly closer.
+
+- [Applied] Normalized News punctuation style.
+  - Added trailing periods to all news entries except the `officially a doctor!` item, per requested consistency rule.
+
+- [Applied] Added dual-email contact lines.
+  - Added `konstantinos dot kontras @kuleuven.be` and `kkontras @mit.edu` in the Contact section.
+
+- [TODO] Preserve current section on browser refresh.
+  - Refresh currently resets to Home/top when scrolling sections without URL hash.
+  - Add state persistence so refresh restores the last active section (for example Publications).
+
+- [Applied] Added dual-link support in News items and split seminar links.
+  - Updated News renderer to support `links` arrays (multiple links with separators).
+  - Updated Oct 2024 seminar entry to include separate links for `KU Leuven` and `FORTH`.
+
+- [Applied] Refined VSC grant link scope in News entries.
+  - Made only `VSC Tier-1` clickable and moved `Compute Grant` to plain text in both VSC grant news items.
+
+- [Applied] Updated MIT-KU Leuven Seed Fund news phrasing.
+  - Changed wording to `Received the MISTI: MIT-KU Leuven Seed Fund €30k.`
+
+- [Applied] Updated NeurIPS spotlight news linked title.
+  - Replaced `Balancing multimodal training through game-theoretic regularization` with `Multimodal Competition Regularizer`.
