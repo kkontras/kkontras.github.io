@@ -156,6 +156,41 @@
       background: rgba(15, 23, 42, 0.95);
       color: #e2e8f0;
     }
+
+    @media (max-width: 767.98px) {
+      .article-shell {
+        margin: 20px auto;
+        padding: 0 14px 36px;
+      }
+
+      .article-card {
+        padding: 20px 16px;
+        border-radius: 12px;
+      }
+
+      #article-root h1 {
+        font-size: 1.68rem;
+        line-height: 1.28;
+      }
+
+      #article-root h2 {
+        font-size: 1.36rem;
+      }
+
+      #article-root h3 {
+        font-size: 1.18rem;
+      }
+
+      #article-root p,
+      #article-root li {
+        font-size: 0.98rem;
+        line-height: 1.72;
+      }
+
+      .essay-meta {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body id="top" class="page-wrapper dark">
@@ -163,8 +198,18 @@
     <header class="header--fixed">
       <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
         <div class="container-xl">
-          <a class="navbar-brand" href="../../index.html">Konstantinos Kontras</a>
-          <div class="navbar-collapse main-menu-item collapse show justify-content-start">
+          <div class="d-none d-lg-inline-flex">
+            <a class="navbar-brand" href="../../index.html">Konstantinos Kontras</a>
+          </div>
+          <button type="button" class="navbar-toggler" data-toggle="collapse"
+                  data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+            <a class="navbar-brand" href="../../index.html">Konstantinos Kontras</a>
+          </div>
+          <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
             <ul class="navbar-nav d-md-inline-flex">
               <li class="nav-item">
                 <a class="nav-link" href="../../index.html#about">Home</a>
@@ -200,6 +245,7 @@
     </article>
   </main>
 
+  <script src="../../js/vendor-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     (function () {
@@ -314,6 +360,7 @@
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
     };
   </script>
+  <script src="../../js/mobile-nav-close.js"></script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

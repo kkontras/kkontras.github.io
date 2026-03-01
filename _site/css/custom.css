@@ -630,6 +630,14 @@ body.dark #profile {
   background-color: var(--kk-panel-dark) !important;
 }
 
+@media (max-width: 991.98px) {
+  body.light #navbar-main .navbar-collapse,
+  body.dark #navbar-main .navbar-collapse {
+    background-color: var(--kk-panel-dark) !important;
+    border-top: 1px solid rgba(236, 230, 219, 0.2);
+  }
+}
+
 /* Distill/article footnotes must remain readable in dark mode. */
 body.dark .footnotes,
 body.dark .footnotes *,
