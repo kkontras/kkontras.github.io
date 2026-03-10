@@ -4,8 +4,8 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Philosophical Article</title>
-  <meta name="description" content="Auto-rendered philosophical article from Markdown or TeX source."/>
+  <title>World Notes Article</title>
+  <meta name="description" content="World Notes article page."/>
   <link rel="stylesheet" href="../../css/vendor-bundle.min.css"/>
   <link rel="stylesheet" href="../../css/wowchemy.css"/>
   <link rel="stylesheet" href="../../css/custom.css?v=20260301"/>
@@ -52,8 +52,8 @@
 
     #article-root h1 {
       font-family: "Merriweather", Georgia, serif;
-      font-size: clamp(1.9rem, 2.7vw, 2.7rem);
-      line-height: 1.22;
+      font-size: clamp(1.72rem, 2.25vw, 2.32rem);
+      line-height: 1.18;
       letter-spacing: 0.01em;
       margin-bottom: 0.85rem;
       padding-bottom: 0.75rem;
@@ -73,6 +73,18 @@
       color: inherit;
     }
 
+    .essay-meta a {
+      color: var(--kk-accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .essay-meta a:hover,
+    .essay-meta a:focus {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     #article-root h2,
     #article-root h3,
     #article-root h4 {
@@ -86,6 +98,15 @@
       font-size: 1.03rem;
     }
 
+    #article-root img[src$="sign_light_nobg.png"],
+    #article-root img[src$="sign_dark_nobg.png"] {
+      display: block;
+      width: 50%;
+      max-width: 220px;
+      height: auto;
+      margin: 0.2rem 0 0;
+    }
+
     body.dark #article-root h1 {
       color: #f4eee2;
       border-bottom-color: rgba(236, 230, 219, 0.24);
@@ -93,6 +114,10 @@
 
     body.dark .essay-meta {
       color: #d8cfc2;
+    }
+
+    body.dark .essay-meta a {
+      color: var(--kk-accent-dark);
     }
 
     body.dark #article-root h2,
@@ -116,16 +141,6 @@
       background: rgba(239, 68, 68, 0.15);
       border: 1px solid rgba(239, 68, 68, 0.4);
       color: #fecaca;
-    }
-
-    #article-root .references-list {
-      margin-top: 0.5rem;
-      padding-left: 1.1rem;
-    }
-
-    #article-root .references-list li {
-      margin-bottom: 0.7rem;
-      line-height: 1.65;
     }
 
     pre {
@@ -207,10 +222,10 @@
                 <a class="nav-link" href="../../index.html#publications" data-target="#publications"><span>Publications</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="../../index.html#philosophy"><span>Philosophy</span></a>
+                <a class="nav-link" href="../../index.html#philosophy"><span>Philosophy</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../../index.html#world-notes" data-target="#world-notes"><span>World Notes</span></a>
+                <a class="nav-link active" href="../../index.html#world-notes" data-target="#world-notes"><span>World Notes</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../../index.html#contact" data-target="#contact"><span>Contact</span></a>
@@ -253,6 +268,7 @@
         icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         toggleButton.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
         localStorage.setItem(storageKey, theme);
+        updateSignatureImage(theme);
       }
 
       setTheme(initialTheme);
@@ -264,48 +280,38 @@
   </script>
 
   <script>
-    function formatReferences(root) {
-      const refsHeading = Array.from(root.querySelectorAll('h2, h3')).find((el) => el.textContent.trim().toLowerCase() === 'references');
-      if (!refsHeading) return;
-
-      let cursor = refsHeading.nextElementSibling;
-      if (!cursor || cursor.tagName.toLowerCase() !== 'p') return;
-
-      const html = cursor.innerHTML;
-      const chunks = html
-        .split(/(?=<a id="[^"]+"><\/a>)/g)
-        .map((s) => s.trim())
-        .filter(Boolean);
-
-      if (!chunks.length) return;
-
-      const list = document.createElement('ol');
-      list.className = 'references-list';
-
-      chunks.forEach((entry) => {
-        const li = document.createElement('li');
-        li.innerHTML = entry;
-        list.appendChild(li);
-      });
-
-      cursor.replaceWith(list);
+    function updateSignatureImage(theme) {
+      const root = document.getElementById('article-root');
+      if (!root) return;
+      const candidates = Array.from(root.querySelectorAll('img'));
+      const signature = candidates.find((img) => /sign_(light|dark)_nobg\.png$/i.test(img.getAttribute('src') || ''));
+      if (!signature) return;
+      signature.src = theme === 'dark' ? 'sign_dark_nobg.png' : 'sign_light_nobg.png';
     }
 
-    function addEssayCredits(root) {
+    function addEssayCredits(root, source) {
       const titleHeading = root.querySelector('h1');
       if (!titleHeading) return;
       if (root.querySelector('.essay-meta')) return;
 
+      const isSpanish = (source || '').toLowerCase().endsWith('_es.md');
+      const englishLabel = isSpanish
+        ? '<a href="./tempi_madres.html?src=tempi_madres.md">English</a>'
+        : 'English';
+      const spanishLabel = isSpanish
+        ? 'Spanish'
+        : '<a href="./tempi_madres.html?src=tempi_madres_es.md">Spanish</a>';
+
       const credits = document.createElement('p');
       credits.className = 'essay-meta';
-      credits.innerHTML = '<strong>Author:</strong> Konstantinos Kontras &nbsp;•&nbsp; <strong>Reviewed by:</strong> Agné Valatkaité, Pieter Adriaens';
+      credits.innerHTML = `<strong>By:</strong> Konstantinos Kontras &nbsp;•&nbsp; <strong>Published in:</strong> Jacobin &nbsp;•&nbsp; <strong>Languages:</strong> ${englishLabel}, ${spanishLabel}, <a href="https://jacobin.gr/apo-ta-tebi-eos-tis-madres-buscadoras-sto-mexiko/" target="_blank" rel="noopener">Greek</a>`;
       titleHeading.insertAdjacentElement('afterend', credits);
     }
 
     (async function () {
       const root = document.getElementById('article-root');
       const params = new URLSearchParams(window.location.search);
-      const source = params.get('src') || 'phmind_intelligence.md';
+      const source = params.get('src') || 'tempi_madres.md';
       const extension = source.split('.').pop().toLowerCase();
 
       try {
@@ -314,18 +320,13 @@
         let raw = await response.text();
 
         if (extension === 'md' || extension === 'markdown') {
-          raw = raw.replaceAll(' <a id="', '\n<a id="');
           root.innerHTML = window.marked.parse(raw);
-          formatReferences(root);
-          addEssayCredits(root);
+          addEssayCredits(root, source);
+          updateSignatureImage(document.body.classList.contains('dark') ? 'dark' : 'light');
 
           const titleHeading = root.querySelector('h1');
           if (titleHeading && titleHeading.textContent.trim()) {
             document.title = titleHeading.textContent.trim();
-          }
-
-          if (window.MathJax && window.MathJax.typesetPromise) {
-            window.MathJax.typesetPromise([root]).catch(() => {});
           }
           return;
         }
@@ -345,13 +346,6 @@
       }
     })();
   </script>
-
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
-    };
-  </script>
   <script src="../../js/mobile-nav-close.js"></script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

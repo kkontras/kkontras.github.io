@@ -151,9 +151,9 @@
                         <li class="nav-item">
                             <a class="nav-link " href="./#philosophy"><span>Philosophy</span></a>
                         </li>
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link " href="./#general_articles"><span>General Articles</span></a>-->
-<!--                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link " href="./#world-notes" data-target="#world-notes"><span>World Notes</span></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link " href="./#contact" data-target="#contact"><span>Contact</span></a>
                         </li>
@@ -358,9 +358,10 @@
 
         </div>
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-2">
                 <div class="col-12">
                     <h1 class="mb-0">Publications</h1>
+                    <p class="world-notes-home-subtitle">Research on multimodal AI and learning systems.</p>
                 </div>
             </div>
 
@@ -535,36 +536,35 @@
 
         </div>
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-2">
                 <div class="col-12">
-                    <h1 class="mb-0">Philosophical Essays</h1>
+                    <h1 class="mb-0">Philosophy</h1>
+                    <p class="world-notes-home-subtitle">Essays on philosophical concerns.</p>
                 </div>
             </div>
 
             <div class="row">
-                <!-- Offset on large screens for a subtle indent -->
                 <div class="col-12 col-lg-10 offset-lg-1">
-
-                    <div class="pub-list-item view-citation mb-3">
-                        <div class="pub-figure">
-                            <img src="./media/metabolic_mind.png" alt="Metabolic Mind philosophy essay figure">
-                        </div>
-                        <div class="pub-content">
-                            <div class="pub-title">
+                    <article class="world-note-card world-note-card--with-media">
+                        <div class="world-note-content">
+                            <h3 class="world-note-title">
                                 <a href="./articles/philosophical/phmind_intelligence.html?src=phmind_intelligence.md">
                                     The Metabolic Mind: Reclaiming the Conditions of Intelligence
                                 </a>
-                            </div>
-                            <div class="pub-details">
-                                <div class="pub-meta">
-                                    <span class="article-metadata li-cite-author">
-                                        <span>Konstantinos Kontras</span>, reviewed by <span>Agné Valatkaité</span> & <span>Pieter Adriaens</span>
-                                    </span>
-                                </div>
-                            </div>
+                            </h3>
+                            <p class="world-note-meta">
+                                <span>Feb 9, 2026</span>
+                                <span class="world-note-meta-tag">Philosophy of Mind</span>
+                                <span class="world-note-reviewers">Reviewed by Agné Valatkaité and Pieter Adriaens</span>
+                            </p>
+                            <p class="world-note-summary">
+                                Intelligence is more than performance. What does it take to reach it?
+                            </p>
                         </div>
-                    </div>
-
+                        <div class="world-note-media">
+                            <img src="./media/metabolic_mind.png" alt="Metabolic Mind philosophy essay figure">
+                        </div>
+                    </article>
 
                 </div>
 
@@ -573,49 +573,25 @@
         </div>
     </section>
 
-<!--    <section id="general_articles" class="home-section wg-pages  ">-->
-<!--        <div class="home-section-bg ">-->
+    <section id="world-notes" class="home-section wg-pages">
+        <div class="home-section-bg ">
 
-<!--        </div>-->
-<!--        <div class="container">-->
-<!--            <div class="row mb-4">-->
-<!--                <div class="col-12">-->
-<!--                    <h1 class="mb-0">Public Reach</h1>-->
-<!--                </div>-->
-<!--            </div>-->
+        </div>
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-12">
+                    <h1 class="mb-0">World Notes</h1>
+                    <p class="world-notes-home-subtitle">Essays on AI, society, politics, and travel.</p>
+                </div>
+            </div>
 
-<!--            <div class="row">-->
-<!--                &lt;!&ndash; Offset on large screens for a subtle indent &ndash;&gt;-->
-<!--                <div class="col-12 col-lg-10 offset-lg-1">-->
-
-<!--                    <div class="pub-list-item view-citation mb-3">-->
-<!--                        <div class="pub-figure">-->
-<!--                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">-->
-<!--                        </div>-->
-<!--                        <div class="pub-content">-->
-<!--                            <div class="pub-title">-->
-<!--                                <a href="https://arxiv.org/abs/2411.07335">-->
-<!--                                    Balancing multimodal training through game-theoretic regularization-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="pub-details">-->
-<!--                                <div class="pub-meta">-->
-<!--                                    <span class="article-metadata li-cite-author">-->
-<!--                                        <span>Konstantinos Kontras</span>,-->
-<!--                                        <span>Thomas Strypsteen</span>,-->
-<!--                                        <span>Christos Chatzichristos</span>,-->
-<!--                                        <span>Paul Pu Liang</span>,-->
-<!--                                        <span>Matthew B. Blaschko</span>,-->
-<!--                                        <span>Maarten De Vos</span>-->
-<!--                                    </span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
+            <div class="row">
+                <div class="col-12 col-lg-10 offset-lg-1">
+                    <div id="world-notes-home-list" class="world-notes-list" aria-live="polite"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact" class="home-section wg-contact  ">
         <div class="home-section-bg ">
@@ -735,6 +711,7 @@
 </script>
 <script src="./js/wowchemy-publication.js" type="module"></script>
 <script src="./js/site-content.js"></script>
+<script src="./js/world-notes.js"></script>
 <script src="./js/mobile-nav-close.js"></script>
 <script src="./js/github-activity.js"></script>
 </body>

@@ -20,14 +20,6 @@
       padding: 0 24px 56px;
     }
 
-    .toolbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 1rem;
-    }
-
     .theme-icon-btn {
       border: 0;
       background: transparent;
@@ -107,12 +99,6 @@
     body.dark #article-root h3,
     body.dark #article-root h4 {
       color: #f0e8da;
-    }
-
-    .back-link {
-      display: inline-block;
-      font-size: 0.95rem;
-      text-decoration: none;
     }
 
     .error {
@@ -212,34 +198,38 @@
           <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
             <ul class="navbar-nav d-md-inline-flex">
               <li class="nav-item">
-                <a class="nav-link" href="../../index.html#about">Home</a>
+                <a class="nav-link" href="../../index.html#about" data-target="#about"><span>Home</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../../index.html#highlights">Highlights</a>
+                <a class="nav-link" href="../../index.html#highlights" data-target="#highlights"><span>Highlights</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../../index.html#publications">Publications</a>
+                <a class="nav-link" href="../../index.html#publications" data-target="#publications"><span>Publications</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="../../index.html#philosophy">Philosophy</a>
+                <a class="nav-link active" href="../../index.html#philosophy"><span>Philosophy</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../../index.html#contact">Contact</a>
+                <a class="nav-link" href="../../index.html#world-notes" data-target="#world-notes"><span>World Notes</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html#contact" data-target="#contact"><span>Contact</span></a>
               </li>
             </ul>
           </div>
+          <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+            <li class="nav-item">
+              <button id="main-theme-toggle" class="nav-link theme-icon-btn" type="button" aria-label="Toggle dark and light mode" title="Switch to light mode">
+                <i id="main-theme-toggle-icon" class="fas fa-sun" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
   </div>
 
   <main class="article-shell">
-    <div class="toolbar">
-      <a class="back-link" href="../../index.html#philosophy">← Back</a>
-      <button id="theme-toggle" class="theme-icon-btn" type="button" aria-label="Toggle dark and light mode" title="Toggle dark/light mode">
-        <i id="theme-toggle-icon" class="fas fa-sun" aria-hidden="true"></i>
-      </button>
-    </div>
     <article class="article-card article-style">
       <div id="article-root">Loading article…</div>
     </article>
@@ -249,12 +239,13 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     (function () {
-      const storageKey = 'philosophy-article-theme';
-      const toggleButton = document.getElementById('theme-toggle');
-      const icon = document.getElementById('theme-toggle-icon');
+      const storageKey = 'main-site-theme';
+      const toggleButton = document.getElementById('main-theme-toggle');
+      const icon = document.getElementById('main-theme-toggle-icon');
+      if (!toggleButton || !icon) return;
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const savedTheme = localStorage.getItem(storageKey);
-      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      const initialTheme = savedTheme || (document.body.classList.contains('dark') ? 'dark' : (prefersDark ? 'dark' : 'light'));
 
       function setTheme(theme) {
         document.body.classList.remove('dark', 'light');

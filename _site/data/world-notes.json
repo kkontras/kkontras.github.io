@@ -1,0 +1,39 @@
+{
+  "notes": [
+    {
+      "title": "From Tempi in Greece to Mexico's Madres Buscadoras",
+      "slug": "from-tempi-greece-to-madres-buscadoras-mexico",
+      "date": "2026-03-07",
+      "summary": "A comparative political reflection connecting public grief, civic pressure, and accountability across Greece and Mexico.",
+      "image": "./articles/world-notes/Picture%203.jpg",
+      "image_alt": "Photo for the Tempi and Madres Buscadoras essay",
+      "languages": [
+        "English",
+        "Spanish",
+        "Greek"
+      ],
+      "language_links": [
+        {
+          "label": "English",
+          "url": "./articles/world-notes/tempi_madres.html?src=tempi_madres.md"
+        },
+        {
+          "label": "Spanish",
+          "url": "./articles/world-notes/tempi_madres.html?src=tempi_madres_es.md"
+        },
+        {
+          "label": "Greek",
+          "url": "https://jacobin.gr/apo-ta-tebi-eos-tis-madres-buscadoras-sto-mexiko/"
+        }
+      ],
+      "tags": [
+        "politics & civil society",
+        "greece",
+        "mexico"
+      ],
+      "publication": "Jacobin",
+      "status": "published",
+      "path": "./articles/world-notes/tempi_madres.html?src=tempi_madres.md"
+    }
+  ]
+}
