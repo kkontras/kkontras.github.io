@@ -23,7 +23,7 @@
 
 
     <link rel="stylesheet" href="./css/wowchemy.css"/>
-    <link rel="stylesheet" href="./css/custom.css"/>
+    <link rel="stylesheet" href="./css/custom.css?v=20260301"/>
 
 
     <link rel="stylesheet" href="./css/libs/chroma/github-light.min.css" title="hl-light" media="print"
@@ -151,9 +151,9 @@
                         <li class="nav-item">
                             <a class="nav-link " href="./#philosophy"><span>Philosophy</span></a>
                         </li>
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link " href="./#general_articles"><span>General Articles</span></a>-->
-<!--                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link " href="./#world-notes" data-target="#world-notes"><span>World Notes</span></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link " href="./#contact" data-target="#contact"><span>Contact</span></a>
                         </li>
@@ -207,7 +207,7 @@
 
                             <h3>
                                 <a href="https://biomed-kuleuven.web.app/" target="_blank" rel="noopener">
-                                    <span>PostDoc Researcher KU Leuven</span>
+                                    <span>PostDoc at MIT &amp; KU Leuven</span>
                                 </a>
                             </h3>
 
@@ -269,35 +269,46 @@
                         </ul>
 
                     </div>
+                    <div class="activity-card d-none d-lg-block" aria-live="polite">
+                        <h4>Selected Public Repositories</h4>
+                        <ul class="activity-list js-github-activity-list">
+                            <li class="activity-loading">Loading repositories...</li>
+                        </ul>
+                        <p class="activity-updated js-website-last-updated">Website last updated: loading...</p>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-8">
 
 
                     <div class="article-style">
-                        <br>
-                        <p>Hi, I'm Konstantinos <br>  <br> I am a PostDoc at the Multisensory Intelligence in MIT Media Lab and in ESAT at KU Leuven,
-                            working with <a href="https://pliang279.github.io/" target="_blank" rel="noopener noreferrer">Paul Liang</a>
-                            and <a href="https://scholar.google.com/citations?user=xTjDXdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Maarten De Vos</a>.
-                            My research studies multimodal learning and the training dynamics of models that combine heterogeneous sources of information.
+                        <p class="intro-lead">
+                            I am a PostDoc researcher at MIT Media Lab and KU Leuven Biomed-ESAT, working with
+                            <a href="https://pliang279.github.io/" target="_blank" rel="noopener noreferrer">Paul Liang</a>
+                            and <a href="https://scholar.google.com/citations?user=xTjDXdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Maarten De Vos</a>. My research focuses on multimodal learning, training dynamics, and reliable models and information theory.
                         </p>
-                        <p>I received my PhD from KU Leuven, where I worked on
-                            <b>Multimodal Fusion</b> and <b>Multimodal Competition</b>, fundamental challenges in training multimodal systems, across modalities ranging
-                            from video, text, and audio to physiological signals such as EEG, supervised by
+                        <p>I received my PhD from KU Leuven on multimodal fusion and multimodal competition, supervised by
                             <a href="https://scholar.google.com/citations?user=xTjDXdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Maarten De Vos</a>,
                             <a href="https://www.linkedin.com/in/christoschatzichristos/?originalSubdomain=be" target="_blank" rel="noopener noreferrer">Christos Chatzichristos</a>,
                             and <a href="https://scholar.google.com/citations?user=WtBmh0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Johan Suykens</a>.
                         </p>
-                        <p>Before the PhD, I worked with the PSI/Visics and TRACE groups on uncertainty estimation for autonomous driving, including
-                            <b>Bayesian model averaging</b> and <b>active learning</b> for semantic segmentation, supervised by
+                        <p>Before the PhD, I worked with PSI/Visics and TRACE on uncertainty estimation for autonomous driving, supervised by
                             <a href="https://scholar.google.com/citations?user=ji4kuF0AAAAJ&hl=nl" target="_blank" rel="noopener noreferrer">Mark Proesmans</a>
                             and <a href="https://insait.ai/prof-luc-van-gool/" target="_blank" rel="noopener noreferrer">Luc Van Gool</a>.
                         </p>
+                        <hr class="news-divider">
                         <h3 id="news">News</h3>
                         <!-- &rarr; [Post-doc vacancy](https://vacatures.uva.nl/UvA/job/Postdoctoral-Researcher-on-Deep-Learning-and-Dynamical-Systems%2C-PDEs%2C-for-Science-%282-years%29/750169202/) on Deep Learning for Neural PDE solvers, Dynamical Systems, Science.      -->
                         <div id="news-list" class="news-list"></div>
                         <noscript>
                             <p>News updates are available when JavaScript is enabled.</p>
                         </noscript>
+                        <div class="activity-card d-lg-none" aria-live="polite">
+                            <h4>Selected Public Repositories</h4>
+                            <ul class="activity-list js-github-activity-list">
+                                <li class="activity-loading">Loading repositories...</li>
+                            </ul>
+                            <p class="activity-updated js-website-last-updated">Website last updated: loading...</p>
+                        </div>
                     </div>
                     <div class="row">
                     </div>
@@ -318,7 +329,7 @@
         <div class="carousel-inner" id="highlights-items"></div>
         <noscript>
             <div class="carousel-inner">
-                <div class="carousel-item active fullscreen">
+                <div class="carousel-item active">
                     <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center">
                         <div class="wg-hero dark container highlight-hero">
                             <h1 class="hero-title">Highlights</h1>
@@ -339,7 +350,6 @@
             <span class="sr-only">Next</span>
         </a>
 
-
     </section>
 
 
@@ -348,9 +358,10 @@
 
         </div>
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-2">
                 <div class="col-12">
                     <h1 class="mb-0">Publications</h1>
+                    <p class="world-notes-home-subtitle">Research on multimodal AI and learning systems.</p>
                 </div>
             </div>
 
@@ -360,11 +371,11 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/mcr_thumb.png" alt="Multimodal Competition Regularizer figure preview">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
-                                <a href="https://arxiv.org/abs/2411.07335">
+                                <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/117227">
                                     Balancing multimodal training through game-theoretic regularization
                                 </a>
                             </div>
@@ -380,7 +391,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>Spotlight at Neurips 2025</em>
+                                    <a class="pub-tag" href="https://neurips.cc/virtual/2025/loc/san-diego/poster/117227" target="_blank" rel="noopener">Spotlight at Neurips 2025</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2024-arxiv-mcr/mcr.bib">
                                         Cite
@@ -392,7 +403,11 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
+<<<<<<< HEAD
                             <img src="./media/ConFu.png" alt="Publication thumbnail placeholder">
+=======
+                            <img class="confu-figure" src="./media/confu.png" alt="Confu figure preview for Contrastive Fusion paper">
+>>>>>>> d353f2e76f854f7b089acb598041b81317ba0dd0
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -412,7 +427,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>ArXiv 2025</em>
+                                    <a class="pub-tag" href="https://arxiv.org/abs/2511.21331" target="_blank" rel="noopener">CVPR 2026</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/koutoupis-2025-arxiv-contrastive-fusion/contrastive_fusion.bib">
                                         Cite
@@ -423,7 +438,7 @@
                     </div>
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img class="thesis-figure" src="./media/thesis_cover.png" alt="Multimodal Fusion thesis cover figure">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -438,7 +453,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>PhD Dissertation 2025, KU Leuven</em>
+                                    <a class="pub-tag" href="https://lirias.kuleuven.be/handle/123456789/4208364" target="_blank" rel="noopener">PhD Dissertation 2025, KU Leuven</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2025-thesis/thesis.bib">
                                         Cite
@@ -452,7 +467,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/mlb_thumb.png" alt="Multi-Loss Gradient Modulation figure preview">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -470,7 +485,8 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>BMVC 2024 & IJCV 2026 </em>
+                                    <a class="pub-tag" href="https://arxiv.org/abs/2405.07930" target="_blank" rel="noopener">BMVC 2024</a>
+                                    <a class="pub-tag" href="https://link.springer.com/article/10.1007/s11263-025-02696-w" target="_blank" rel="noopener">IJCV 2026</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2024-bmvc-multiloss/multiloss.bib">
                                         Cite
@@ -482,7 +498,7 @@
 
                     <div class="pub-list-item view-citation mb-3">
                         <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
+                            <img src="./media/coresleep_thumb.png" alt="CoRe-Sleep figure preview">
                         </div>
                         <div class="pub-content">
                             <div class="pub-title">
@@ -500,7 +516,7 @@
                                     </span>
                                 </div>
                                 <div class="pub-footer">
-                                    <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>
+                                    <a class="pub-tag" href="https://ieeexplore.ieee.org/document/10400520" target="_blank" rel="noopener">IEEE Transactions on Neural Systems and Rehabilitation Engineering</a>
                                     <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                                        data-filename="/publication/kkontras-2023-tnsre-coresleep/coresleep.bib">
                                         Cite
@@ -524,36 +540,35 @@
 
         </div>
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-2">
                 <div class="col-12">
-                    <h1 class="mb-0">Philosophical Essays</h1>
+                    <h1 class="mb-0">Philosophy</h1>
+                    <p class="world-notes-home-subtitle">Essays on philosophical concerns.</p>
                 </div>
             </div>
 
             <div class="row">
-                <!-- Offset on large screens for a subtle indent -->
                 <div class="col-12 col-lg-10 offset-lg-1">
-
-                    <div class="pub-list-item view-citation mb-3">
-                        <div class="pub-figure">
-                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">
-                        </div>
-                        <div class="pub-content">
-                            <div class="pub-title">
+                    <article class="world-note-card world-note-card--with-media">
+                        <div class="world-note-content">
+                            <h3 class="world-note-title">
                                 <a href="./articles/philosophical/phmind_intelligence.html?src=phmind_intelligence.md">
                                     The Metabolic Mind: Reclaiming the Conditions of Intelligence
                                 </a>
-                            </div>
-                            <div class="pub-details">
-                                <div class="pub-meta">
-                                    <span class="article-metadata li-cite-author">
-                                        <span>Konstantinos Kontras</span>, reviewed by <span>Agné Valatkaité</span> & <span>Pieter Adriaens</span>
-                                    </span>
-                                </div>
-                            </div>
+                            </h3>
+                            <p class="world-note-meta">
+                                <span>Feb 9, 2026</span>
+                                <span class="world-note-meta-tag">Philosophy of Mind</span>
+                                <span class="world-note-reviewers">Reviewed by Agné Valatkaité and Pieter Adriaens</span>
+                            </p>
+                            <p class="world-note-summary">
+                                Intelligence is more than performance. What does it take to reach it?
+                            </p>
                         </div>
-                    </div>
-
+                        <div class="world-note-media">
+                            <img src="./media/metabolic_mind.png" alt="Metabolic Mind philosophy essay figure">
+                        </div>
+                    </article>
 
                 </div>
 
@@ -562,49 +577,25 @@
         </div>
     </section>
 
-<!--    <section id="general_articles" class="home-section wg-pages  ">-->
-<!--        <div class="home-section-bg ">-->
+    <section id="world-notes" class="home-section wg-pages">
+        <div class="home-section-bg ">
 
-<!--        </div>-->
-<!--        <div class="container">-->
-<!--            <div class="row mb-4">-->
-<!--                <div class="col-12">-->
-<!--                    <h1 class="mb-0">Public Reach</h1>-->
-<!--                </div>-->
-<!--            </div>-->
+        </div>
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-12">
+                    <h1 class="mb-0">World Notes</h1>
+                    <p class="world-notes-home-subtitle">Essays on AI, society, politics, and travel.</p>
+                </div>
+            </div>
 
-<!--            <div class="row">-->
-<!--                &lt;!&ndash; Offset on large screens for a subtle indent &ndash;&gt;-->
-<!--                <div class="col-12 col-lg-10 offset-lg-1">-->
-
-<!--                    <div class="pub-list-item view-citation mb-3">-->
-<!--                        <div class="pub-figure">-->
-<!--                            <img src="./media/publication-placeholder.svg" alt="Publication thumbnail placeholder">-->
-<!--                        </div>-->
-<!--                        <div class="pub-content">-->
-<!--                            <div class="pub-title">-->
-<!--                                <a href="https://arxiv.org/abs/2411.07335">-->
-<!--                                    Balancing multimodal training through game-theoretic regularization-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="pub-details">-->
-<!--                                <div class="pub-meta">-->
-<!--                                    <span class="article-metadata li-cite-author">-->
-<!--                                        <span>Konstantinos Kontras</span>,-->
-<!--                                        <span>Thomas Strypsteen</span>,-->
-<!--                                        <span>Christos Chatzichristos</span>,-->
-<!--                                        <span>Paul Pu Liang</span>,-->
-<!--                                        <span>Matthew B. Blaschko</span>,-->
-<!--                                        <span>Maarten De Vos</span>-->
-<!--                                    </span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
+            <div class="row">
+                <div class="col-12 col-lg-10 offset-lg-1">
+                    <div id="world-notes-home-list" class="world-notes-list" aria-live="polite"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact" class="home-section wg-contact  ">
         <div class="home-section-bg ">
@@ -618,7 +609,8 @@
                     <ul class="fa-ul">
                         <li>
                             <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
-                            <span id="person-email"><a href="mailto:konstantinos dot kontras@kuleuven.be">konstantinos dot kontras @kuleuven.be</a></span>
+                            <span id="person-email-kul"><a href="mailto:konstantinos.kontras@kuleuven.be">konstantinos dot kontras @kuleuven.be</a></span><br>
+                            <span id="person-email-mit"><a href="mailto:kkontras@mit.edu">kkontras @mit.edu</a></span>
                         </li>
                     </ul>
                 </div>
@@ -723,5 +715,8 @@
 </script>
 <script src="./js/wowchemy-publication.js" type="module"></script>
 <script src="./js/site-content.js"></script>
+<script src="./js/world-notes.js"></script>
+<script src="./js/mobile-nav-close.js"></script>
+<script src="./js/github-activity.js"></script>
 </body>
 </html>
