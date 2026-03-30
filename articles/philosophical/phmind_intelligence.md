@@ -37,7 +37,7 @@ This worry is often illustrated by the well-known thought experiment involving M
 
 A closely related concern is sharpened by the Chinese Room thought experiment. John Searle invites us to imagine a system that manipulates symbols according to formal rules in such a way that it produces behavior indistinguishable from genuine understanding, despite lacking any comprehension of the symbols it processes ([Searle 1980](#searle1980)). The force of the example lies in the distinction it draws between syntactic manipulation and semantic understanding. Even if a system instantiates the relevant functional organization, Searle argues, this alone does not guarantee that it understands what it is doing. Taken together, these thought experiments underscore a persistent worry: explanations that succeed in accounting for intelligent performance may nevertheless fall short of explaining what it is like to understand or experience anything at all.
 
-
+---
 
 ## Mind as Biological Metabolism
 
@@ -49,6 +49,7 @@ From this perspective, subjectivity is not something that merely happens to a sy
 
 Seen in this light, the mind-body gap is not bridged by adding consciousness as an extra layer atop physical processes, but by refining our understanding of what kinds of physical processes living matter instantiates. When matter is understood in its bio-logical sense, the transition from physical organization to lived experience appears less mysterious. If subjectivity is functionally tied to recursive, self-maintaining biological activity, then the mind is not separate from the body but is the experiential expression of life’s distinctive mode of physical organization.
 
+---
 
 ## From Viability to Norms
 
@@ -66,6 +67,8 @@ If normativity articulates the space in which a living system encounters its wor
 
 This conception distinguishes intelligence from both brute persistence and mechanical control. A system may remain viable through rigid or narrowly tuned regulatory mechanisms without thereby exhibiting intelligence. Intelligence, by contrast, involves the capacity to cope with novelty, which non-biological intelligence fails to do so far [He & Bu 2025](#he2025), to reconfigure strategies in response to changing circumstances, and to integrate multiple normative constraints at once. What marks intelligence is not the presence of norms as such, but the ability to navigate a norm-structured environment in ways that are adaptive without being pre-scripted. In this sense, intelligence reflects a deepening of agency rather than a departure from biological regulation.
 
+---
+
 ## Intelligence as Norm-Sensitive Engagement
 
 Importantly, this account allows for degrees and kinds of intelligence without collapsing them into a single metric. As living systems increase in organizational complexity, the normative spaces they inhabit expand accordingly. What counts as acting well is no longer exhausted by immediate metabolic preservation, but can involve longer-term coordination, social interaction, and participation in shared practices. Human intelligence, on this view, does not transcend biological normativity but elaborates it: linguistic reasoning, artistic creation, and scientific inquiry are higher-order ways of acting appropriately within complex normative domains that presuppose more basic forms of embodied sense-making.
@@ -79,13 +82,9 @@ Seen in this light, intelligence is neither an abstract computational property n
 ## References
 
 <a id="aristotle1931"></a>Aristoteles and John Alexander Smith. 1931. *De anima*. Vol. 3. Clarendon Press Oxford. <a id="chalmers1997"></a>Chalmers, David J. 1997. *The conscious mind: In search of a fundamental theory.* Oxford Paperbacks. <a id="descartes2008"></a>Descartes, René. 2008. *Meditations on first philosophy.* Oxford University Press. <a id="di2005"></a>Di Paolo, Ezequiel A. 2005. “Autopoiesis, adaptivity, teleology, agency.” <a id="fodor1974"></a>Fodor, Jerry A. 1974. “Special sciences.” <a id="godfrey2016"></a>Godfrey-Smith, Peter. 2016. “Mind, matter, and metabolism.” <a id="he2025"></a>He, Yongyuan & Yi Bu. 2025. arXiv:2512.06705. <a id="jackson1998"></a>Jackson, Frank. 1998. “Epiphenomenal qualia.” <a id="jonas2001"></a>Jonas, Hans. 2001. *The phenomenon of life.* <a id="kripke1980"></a>Kripke, Saul A. 1980. *Naming and necessity.* <a id="nagel2024"></a>Nagel, Thomas. 2024. *What is it like to be a bat?* <a id="putnam1960"></a>Putnam, Hilary. 1960. “Minds and Machines.” <a id="searle1980"></a>Searle, John R. 1980. “Minds, brains, and programs.” <a id="thompson2010"></a>Thompson, Evan. 2010. *Mind in life.*<a id="godfrey2016"></a>**Godfrey-Smith, P. (2016).** Mind, matter, and metabolism.
-
-<a id="jonas2001"></a>**Jonas, H. (2001).** *The Phenomenon of Life.*
-
-<a id="thompson2010"></a>**Thompson, E. (2010).** *Mind in Life.*
-
-<a id="dipaolo2005"></a>**Di Paolo, E. A. (2005).** Autopoiesis, adaptivity, teleology, agency.
-
-<a id="he2025"></a>**He, Y., & Bu, Y. (2025).** arXiv:2512.06705.
+<a id="jonas2001"></a>Jonas, H. (2001). *The Phenomenon of Life.*
+<a id="thompson2010"></a>Thompson, E. (2010). *Mind in Life.*
+<a id="dipaolo2005"></a>**Di Paolo, E. A. (2005). Autopoiesis, adaptivity, teleology, agency.
+<a id="he2025"></a>He, Y., & Bu, Y. (2025). Academic journals' AI policies fail to curb the surge in AI-assisted academic writing. arXiv:2512.06705.
 
 
